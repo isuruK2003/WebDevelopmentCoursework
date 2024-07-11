@@ -1,0 +1,82 @@
+.checkout {
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin: 1em 0;
+    background-color: #fff
+}
+
+.checkout fieldset {
+    border:solid 1px #ccc;
+    margin-top: 1em;
+    background-color: #eeeeee;
+}
+
+.checkout legend {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0.1em 1em;
+    background-color: #ffffff;
+    border: solid 1px #ccc;
+    border-radius: 0.5em;
+    color: #333;
+}
+
+.form-row textarea {
+    padding: 0.5em;
+    font: inherit;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: solid 1px #ccc;
+    resize: vertical;
+}
+
+.form-row label {
+    display: block;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+.form-row input {
+    display: block;
+    width: 100%;
+    border: solid 1px #ccc;
+    padding: 0.6em;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+.form-row input:focus , .form-row textarea:focus{
+    outline: solid 3px #1153ee8a;
+}
+
+.form-buttons {
+    text-align: right;
+}
+
+.form-buttons button {
+    padding: 0.5em 1em;
+    margin-left: 1em;
+    transition: 0.3s;
+}
+
+.form-buttons button[type='submit'] {
+    background-color: crimson;
+    color: #fff;
+    border: solid 1px crimson;
+}
+
+.form-buttons button[type='submit']:hover {
+    background-color: rgba(220, 20, 60, 0.173);
+    color: crimson;
+}
+
+.form-buttons button[type='reset'] {
+    background-color: black;
+    color: #fff;
+    border: solid 1px black;
+}
+
+.form-buttons button[type='reset']:hover {
+    background-color: #ccc;
+    color: #000;
+}

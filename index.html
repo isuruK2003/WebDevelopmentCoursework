@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <main>
+        <div id="products">
+            <div id="product-1" class="product">
+                <div class="product-image">
+                    <img src="images/img1.webp" alt="product-1-image">
+                </div>
+                <div class="product-details">
+                    <span class="title">Title</span>
+                    <span class="price">&#163;10</span>
+                </div>
+                <div class="product-button">
+                    <button class="add-button" onclick="addToCart('product-1')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div id="product-2" class="product">
+                <div class="product-image">
+                    <img src="images/img2.webp" alt="product-2-image">
+                </div>
+                <div class="product-details">
+                    <span class="title">Title</span>
+                    <span class="price">&#163;20</span>
+                </div>
+                <div class="product-button">
+                    <button class="add-button" onclick="addToCart('product-2')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div id="product-3" class="product">
+                <div class="product-image">
+                    <img src="images/img3.webp" alt="product-3-image">
+                </div>
+                <div class="product-details">
+                    <span class="title">Title</span>
+                    <span class="price">&#163;30</span>
+                </div>
+                <div class="product-button">
+                    <button class="add-button" onclick="addToCart('product-3')">Add to Cart</button>
+                </div> 
+            </div>
+            
+            <div id="product-4" class="product">
+                <div class="product-image">
+                    <img src="images/img4.webp" alt="product-4-image">
+                </div>
+                <div class="product-details">
+                    <span class="title">Title</span>
+                    <span class="price">&#163;30</span>
+                </div>
+                <div class="product-button">
+                    <button class="add-button" onclick="addToCart('product-4')">Add to Cart</button>
+                </div> 
+            </div>
+        </div>
+
+        <div class="cart">
+
+            <h2>Your order</h2>
+
+            <div id="cart-content">
+                <div id="cart-item-1" class="cart-item">
+                    <button class="cart-remove-btn">x</button>
+                    <div class="cart-img">
+                        <img src="images/img1.webp" alt="product-1-image">
+                    </div>
+                    <div class="cart-item-title">
+                        Product Description
+                    </div>
+                    <div class="cart-item-buttons">
+                        <input type="number" min="1" max="50" value="1">
+                    </div>
+                    <div class="cart-item-quantity">&#163;10</div>
+                </div>
+
+                <div id="cart-item-2" class="cart-item">
+                    <button class="cart-remove-btn"><span>x</span></button>
+                    <div class="cart-img">
+                        <img src="images/img1.webp" alt="product-1-image">
+                    </div>
+                    <div class="cart-item-title">
+                        Product Description
+                    </div>
+                    <div class="cart-item-buttons">
+                        <input type="number" min="1" max="50" value="1">
+                    </div>
+                    <div class="cart-item-quantity">&#163;10</div>
+                </div>
+            </div>
+
+            <div class="cart-controls">
+                <button >Checkout</button>
+                <div>
+                    Total: &#163;<span id="cart-total">30</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="checkout">
+            <h2 style="text-align: center;">Checkout</h2>
+            <form action="#">
+                <fieldset>
+                    <legend>Billing Information</legend>
+                    <p class="form-row">
+                        <label for="fname">First name:</label>
+                        <input type="text" name="fname" id="fname" required>                        
+                    </p>
+
+                    <p class="form-row">
+                        <label for="lname">Second name:</label>
+                        <input type="text" name="lname" id="lname" required>                        
+                    </p>
+
+                    <p class="form-row">
+                        <label for="address">Shipping address:</label>
+                        <input type="text" name="address" id="address" required>                        
+                    </p>
+
+                    <p class="form-row">
+                        <label for="email">Email address:</label>
+                        <input type="email" name="email" id="email" required>                        
+                    </p>
+
+                    <p class="form-row">
+                        <label for="notes">Notes (Optional)</label>
+                        <textarea name="notes" id="notes" placeholder="Anything else?"></textarea>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Payment information</legend>
+                        
+                    <p class="form-row">
+                        <label for="card">Card number:</label>
+                        <input type="text" name="card" id="card" required maxlength="16">                        
+                    </p>
+                    
+                    <p class="form-row">
+                        <label for="expire">Expiration Day:</label>
+                        <input type="date" name="expire" id="expire" required>                        
+                    </p>
+
+                    <p class="form-row">
+                        <label for="cvc">CVC:</label>
+                        <input type="text" name="cvc" id="cvc" required maxlength="3">                        
+                    </p>
+                </fieldset>
+
+                <p class="form-buttons">
+                    <button type="submit">Place Order</button>
+                    <button type="reset">Clear inputs</button>
+                </p>
+            </form>
+        </div>
+    </main>
+    <script src="shop.js"></script>
+</body>
+</html>
