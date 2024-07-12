@@ -1,14 +1,20 @@
+:root {
+    --std-border-radius:0.5em;
+}
+
 .checkout {
     border: 1px solid #ccc;
     padding: 1em;
     margin: 1em 0;
-    background-color: #fff
+    background-color: #fff;
+    border-radius:var(--std-border-radius);
 }
 
 .checkout fieldset {
     border:solid 1px #ccc;
     margin-top: 1em;
     background-color: #eeeeee;
+    border-radius: var(--std-border-radius);
 }
 
 .checkout legend {
@@ -20,7 +26,7 @@
     color: #333;
 }
 
-.form-row textarea {
+.checkout textarea {
     padding: 0.5em;
     font: inherit;
     width: 100%;
@@ -28,26 +34,48 @@
     box-sizing: border-box;
     border: solid 1px #ccc;
     resize: vertical;
+    border-radius: var(--std-border-radius);
 }
 
-.form-row label {
+.checkout label {
     display: block;
     width: 100%;
-    font-size: 0.9em;
 }
 
-.form-row input {
+.checkout input {
     display: block;
     width: 100%;
     border: solid 1px #ccc;
-    padding: 0.6em;
+    padding: 0.5em;
     box-sizing: border-box;
     font: inherit;
+    font-size: 0.9em;
+    border-radius: var(--std-border-radius);
 }
 
-.form-row input:focus , .form-row textarea:focus{
+.checkout input:focus , .checkout textarea:focus{
     outline: solid 3px #1153ee8a;
 }
+
+input#expire-year , input#expire-month, input#cvc {
+    display: inline;
+    width: 30%;
+    text-align: center;
+}
+
+.form-col {
+    box-sizing: border-box;
+}
+
+.form-col-item {
+    display: inline;
+    width: 50%;
+    box-sizing: border-box;
+    float: inline-start;
+}
+
+
+/*-------------- Buttons --------------*/
 
 .form-buttons {
     text-align: right;
@@ -79,4 +107,10 @@
 .form-buttons button[type='reset']:hover {
     background-color: #ccc;
     color: #000;
+}
+
+.checkout .error {
+    color: red;
+    font-weight: bold;
+    font-family: monospace;
 }

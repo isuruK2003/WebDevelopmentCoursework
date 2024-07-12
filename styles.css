@@ -8,6 +8,8 @@ button {
     font: inherit;
     cursor: pointer;
     border: none;
+    box-sizing: border-box;
+    border-radius: 2em;
 }
 
 main {
