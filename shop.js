@@ -6,7 +6,7 @@ var products = {
     },
     'product-2' : {
         unitPrice: 30,
-        title: 'T-Shirt',
+        title: 'T-Shirt Blue',
         img:'img2.webp'
     },
     'product-3' : {
@@ -31,7 +31,7 @@ var cartTotal = 0;
 
 function makeProduct(productId) {
     let productsElem = document.getElementById('products');
-    let product = document.createElement('product');
+    let product = document.createElement('div');
 
     product.id = productId;
     product.className = 'product';
@@ -53,23 +53,37 @@ function makeProduct(productId) {
 
 function makeCartItem(productId, quantity, total) {
     let cartContent = document.getElementById('cart-content');
-    let cartItem = document.createElement('div');
+    let cartItem = document.createElement('tr');
     
     cartItem.id = productId;
     cartItem.className = 'cart-item';
     cartItem.innerHTML =
-            `<button class="cart-remove-btn">x</button>
+        `
+        <td>
+            <button class="cart-remove-btn" onclick="removeFromCart('${productId}')">&#10005;</button>
+        </td>
+        <td>
             <div class="cart-img">
                 <img src="images/${products[productId].img}" alt="${productId}-image">
             </div>
+        </td>
+        <td>
             <div class="cart-item-title">
-                ${products[productId].title}
+                <a href="#${productId}">${products[productId].title}</a>
             </div>
+        </td>
+        <td>
             <div class="cart-item-buttons">
-                <input type="number" min="1" max="50" value="${quantity}">
+                <button class="cart-item-increase">+</button>
+                <span class="cart-item-quantity">${quantity}</span>
+                <button class="cart-item-decrease">-</button>
             </div>
-            <div class="cart-item-quantity">&#163;${total}</div>`;
-
+        </td>
+        <td>
+            <div class="cart-item-total">&#163;${total}</div>
+        </td>
+        `;
+    
     cartContent.appendChild(cartItem);
 }
 
@@ -81,10 +95,22 @@ function loadProducts() {
 
 function loadCart() {
     document.getElementById('cart-content').innerHTML = '';
-    for (key in cart) {
+
+    if (Object.keys(cart).length == 0) {
+        document.getElementById('cart-empty').style.display = 'block';
+    } else {
+        document.getElementById('cart-empty').style.display = 'none';
+    }
+    
+    let cartTotal = 0;
+    
+    for (let key in cart) {
         let total = cart[key] * products[key].unitPrice;
         makeCartItem(key, cart[key], total);
+        cartTotal += total;
     }
+    
+    document.getElementById('cart-total').innerHTML = cartTotal;
 }
 
 function addToCart(productId) {
@@ -93,6 +119,11 @@ function addToCart(productId) {
     } else {
         cart[productId]++;
     }
+    loadCart();
+}
+
+function removeFromCart(productId) {
+    delete cart[productId];
     loadCart();
 }
 

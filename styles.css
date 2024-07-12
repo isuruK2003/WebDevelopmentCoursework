@@ -12,6 +12,15 @@ button {
     border-radius: 2em;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 main {
     width: 70%;
     margin: 1rem auto;
@@ -33,6 +42,7 @@ main {
     padding:0 0 1em;
     transition: 0.3s;
     background-color: #fff;
+    border-radius: 0.5em;
 }
 
 .product:hover {

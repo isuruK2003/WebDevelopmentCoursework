@@ -11,7 +11,7 @@
 <body>
     <main>
         <div id="products">
-            <!-- HTML is dynamically added by js -->
+            <!-- product HTMLs is dynamically added by js -->
 
             <!-- <div id="product-1" class="product">
                 <div class="product-image">
@@ -29,28 +29,47 @@
 
         <div class="cart">
             <h2>Your order</h2>
-            <div id="cart-content">
-                <!-- HTML will be added by js -->
-                 
-                <!-- <div id="cart-item-1" class="cart-item">
-                    <button class="cart-remove-btn">x</button>
-                    <div class="cart-img">
-                        <img src="images/img1.webp" alt="product-1-image">
-                    </div>
-                    <div class="cart-item-title">
-                        Product Description
-                    </div>
-                    <div class="cart-item-buttons">
-                        <input type="number" min="1" max="50" value="1">
-                    </div>
-                    <div class="cart-item-quantity">&#163;10</div>
-                </div> -->
+            
+            <div id="cart-empty">
+                <img src="/images/empty_cart.svg" alt="Empty cart image">
+                <p>EMPTY CART</p>
             </div>
 
+            <table id="cart-content">
+
+                <!-- Cart item HTML will be added by javascript -->
+
+                <!-- <tr id="product-1" class="cart-item">
+                    <td>
+                        <button class="cart-remove-btn" onclick="removeFromCart('product-1')">&#10005;</button>
+                    </td>
+                    <td>
+                        <div class="cart-img">
+                            <img src="images/img1.webp" alt="product-1-image">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cart-item-title">
+                            <a href="#product-1">Product Description</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cart-item-buttons">
+                            <button class="cart-item-increase">+</button>
+                            <span class="cart-item-quantity">1</span>
+                            <button class="cart-item-decrease">-</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cart-item-total">&#163;10</div>
+                    </td>
+                </tr> -->
+            </table>
+
             <div class="cart-controls">
-                <button >Checkout</button>
-                <div>
-                    Total: &#163;<span id="cart-total">30</span>
+                <button>Checkout</button>
+                <div class="cart-total-section">
+                    Total: &#163;<span id="cart-total"></span>
                 </div>
             </div>
         </div>
@@ -114,7 +133,7 @@
                 </fieldset>
 
                 <p class="form-buttons">
-                    <button type="button" onclick="checkForm(this.form)">Place Order</button>
+                    <button type="submit" onclick="checkForm(this.form)">Place Order</button>
                     <button type="reset" onclick="resetForm(this.form)">Clear inputs</button>
                 </p>
             </form>

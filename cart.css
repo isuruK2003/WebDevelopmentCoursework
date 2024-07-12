@@ -4,15 +4,29 @@
     text-align: center;
     margin: 1em 0;
     background-color: #fff;
+    border-radius: 0.5em;
 }
 
-.cart-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+#cart-empty {
+    text-align: center;
+    font-weight: bold;
+}
+
+#cart-empty img {
+    width: 6em;
+}
+
+table#cart-content {
+    table-layout: auto;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.cart-item td {
     margin-bottom: 1em;
     border-bottom: solid 1px #ccc;
     padding: 0.5em 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .cart-img {
@@ -28,9 +42,17 @@
 button.cart-remove-btn {
     height: 2em;
     width: 2em;
+    border-radius: 1em;
     color: #333;
     background-color: inherit;
 }
+
+button.cart-remove-btn:hover {
+    color: white;
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+/*--- Cart controls ---*/
 
 .cart-controls {
     display: flex;
@@ -50,4 +72,35 @@ button.cart-remove-btn {
     background-color: #ccc;
     color: #000;
 }
+
+/*--- Cart Increase - decrease buttons ---*/
+
+.cart-item-buttons {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #ccc;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.cart-item-buttons button {
+    border-radius: 0;
+    height: 1.5em;
+}
+
+.cart-item-buttons button:hover {
+    background-color: #333;
+    color: white;
+}
+
+/*--- Cart totals section ---*/
+
+.cart-total-section {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+
 
