@@ -54,7 +54,7 @@
 }
 
 .checkout input:focus , .checkout textarea:focus{
-    outline: solid 3px #1153ee8a;
+    outline: solid 3px rgba(0, 149, 255, 0.5);
 }
 
 input#expire-year , input#expire-month, input#cvc {

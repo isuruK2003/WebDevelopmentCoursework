@@ -45,6 +45,7 @@ button.cart-remove-btn {
     border-radius: 1em;
     color: #333;
     background-color: inherit;
+    transition: 0.3s;
 }
 
 button.cart-remove-btn:hover {

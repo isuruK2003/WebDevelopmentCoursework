@@ -66,6 +66,15 @@ main {
 .product .title , .product-details .price {
     display: block;
     padding: 0.5rem 0;
+    text-align: center;
+}
+
+.product .title {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.product-details .price {
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .product-button button {

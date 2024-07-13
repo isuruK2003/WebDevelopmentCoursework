@@ -2,27 +2,32 @@ var products = {
     'product-1' : {
         unitPrice: 10,
         title: 'T-Shirt',
-        img:'img1.webp'
+        img:'img1.webp',
+        stock: 2
     },
     'product-2' : {
         unitPrice: 30,
         title: 'T-Shirt Blue',
-        img:'img2.webp'
+        img:'img2.webp',
+        stock: 10
     },
     'product-3' : {
         unitPrice: 30,
         title: 'T-Shirt',
-        img:'img3.webp'
+        img:'img3.webp',
+        stock: 30
     },
     'product-4' : {
         unitPrice: 30,
         title: 'T-Shirt',
-        img:'img4.webp'
+        img:'img4.webp',
+        stock: 50
     },
     'product-5' : {
         unitPrice: 30,
         title: 'T-Shirt',
-        img:'img5.webp'
+        img:'img5.webp',
+        stock: 19
     },
 }
 
@@ -74,9 +79,9 @@ function makeCartItem(productId, quantity, total) {
         </td>
         <td>
             <div class="cart-item-buttons">
-                <button class="cart-item-increase">+</button>
+                <button class="cart-item-increase" onclick="increaseQuantity('${productId}')">+</button>
                 <span class="cart-item-quantity">${quantity}</span>
-                <button class="cart-item-decrease">-</button>
+                <button class="cart-item-decrease" onclick="decreaseQuantity('${productId}')">-</button>
             </div>
         </td>
         <td>
@@ -88,7 +93,7 @@ function makeCartItem(productId, quantity, total) {
 }
 
 function loadProducts() {
-    for (key in products) {
+    for (let key in products) {
         makeProduct(key);
     }
 }
@@ -116,7 +121,7 @@ function loadCart() {
 function addToCart(productId) {
     if (!(productId in cart)) {
         cart[productId] = 1;
-    } else {
+    } else if (cart[productId] < products[productId].stock) {
         cart[productId]++;
     }
     loadCart();
@@ -124,6 +129,20 @@ function addToCart(productId) {
 
 function removeFromCart(productId) {
     delete cart[productId];
+    loadCart();
+}
+
+function increaseQuantity(productId) {
+    if (cart[productId] < products[productId].stock) {
+        cart[productId]++;
+    }
+    loadCart();
+}
+
+function decreaseQuantity(productId) {
+    if (cart[productId] > 1) {
+        cart[productId]--;
+    }
     loadCart();
 }
 
