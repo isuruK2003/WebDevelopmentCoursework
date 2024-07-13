@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: whitesmoke;
+    background-color: rgb(245, 245, 245);
 }
 
 button {
@@ -90,3 +90,17 @@ main {
     background-color: #fff;
     color: #000;
 }
+
+/* Controls */
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: solid 1px #ccc;
+    border-radius: 2em;
+    font-size: 0.9rem;
+}
+

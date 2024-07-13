@@ -28,11 +28,10 @@ var products = {
         title: 'T-Shirt',
         img:'img5.webp',
         stock: 19
-    },
+    }
 }
 
 var cart = {};
-var cartTotal = 0;
 
 function makeProduct(productId) {
     let productsElem = document.getElementById('products');
@@ -98,6 +97,22 @@ function loadProducts() {
     }
 }
 
+function updateCartTotal(cartTotal) {
+    let cartElems = document.getElementsByClassName('cart-total');
+
+    for (let i = 0; i < cartElems.length; i++) {
+        cartElems[0].innerHTML = cartTotal;
+    }
+}
+
+function updateCartCount(cartCount) {
+    let cartElems = document.getElementsByClassName('cart-count');
+
+    for (let i = 0; i < cartElems.length; i++) {
+        cartElems[0].innerHTML = cartCount;
+    }
+}
+
 function loadCart() {
     document.getElementById('cart-content').innerHTML = '';
 
@@ -108,14 +123,17 @@ function loadCart() {
     }
     
     let cartTotal = 0;
+    let cartCount = 0;
     
     for (let key in cart) {
         let total = cart[key] * products[key].unitPrice;
         makeCartItem(key, cart[key], total);
         cartTotal += total;
+        cartCount += cart[key];
     }
-    
-    document.getElementById('cart-total').innerHTML = cartTotal;
+
+    updateCartCount(cartCount);
+    updateCartTotal(cartTotal);
 }
 
 function addToCart(productId) {
