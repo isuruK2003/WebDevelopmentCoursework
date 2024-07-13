@@ -102,5 +102,31 @@ main {
     border: solid 1px #ccc;
     border-radius: 2em;
     font-size: 0.9rem;
+    background-color: #fff;
 }
 
+.controls button#cart-open {
+    border: solid 1px #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em;
+}
+
+.controls button#cart-open img{
+    width: 1.5em;
+    border-right: solid 1px #ccc;
+    padding: 0 0.5em;
+}
+
+.controls button#cart-open .cart-count {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+    padding: 0 0.5em;
+}
+
+.controls .sort select {
+    font: inherit;
+    border: none;
+    background-color: inherit;
+}

@@ -1,86 +1,93 @@
-var products = {
-    'product-1' : {
+var products = [
+    {
+        id: 'product-1',
         unitPrice: 10,
         title: 'T-Shirt',
-        img:'img1.webp',
+        img: 'img1.webp',
         stock: 2
     },
-    'product-2' : {
+    {
+        id: 'product-2',
         unitPrice: 30,
         title: 'T-Shirt Blue',
-        img:'img2.webp',
+        img: 'img2.webp',
         stock: 10
     },
-    'product-3' : {
+    {
+        id: 'product-3',
         unitPrice: 30,
         title: 'T-Shirt',
-        img:'img3.webp',
+        img: 'img3.webp',
         stock: 30
     },
-    'product-4' : {
+    {
+        id: 'product-4',
         unitPrice: 30,
         title: 'T-Shirt',
-        img:'img4.webp',
+        img: 'img4.webp',
         stock: 50
     },
-    'product-5' : {
+    {
+        id: 'product-5',
         unitPrice: 30,
         title: 'T-Shirt',
-        img:'img5.webp',
+        img: 'img5.webp',
         stock: 19
     }
-}
+];
 
 var cart = {};
 
-function makeProduct(productId) {
+function makeProduct(productObject) {
+    // Makes a single product HTML
     let productsElem = document.getElementById('products');
-    let product = document.createElement('div');
+    let productElem = document.createElement('div');
 
-    product.id = productId;
-    product.className = 'product';
-    product.innerHTML = 
+    productElem.id = productObject.id;
+    productElem.className = 'product';
+    productElem.innerHTML = 
     `<div class="product-image">
-        <img src="images/${products[productId].img}" alt="${productId}-image">
+        <img src="images/${productObject.img}" alt="${productObject.id}-image">
     </div>
     <div class="product-details">
-        <span class="title">${products[productId].title}</span>
-        <span class="price">&#163;${products[productId].unitPrice}</span>
+        <span class="title">${productObject.title}</span>
+        <span class="price">&#163;${productObject.unitPrice}</span>
     </div>
     <div class="product-button">
-        <button class="add-button" onclick="addToCart('${productId}')">Add to Cart</button>
+        <button class="add-button" onclick="addToCart('${productObject.id}')">Add to Cart</button>
     </div>`;
 
-    productsElem.appendChild(product);
+    productsElem.appendChild(productElem);
 }
 
 
-function makeCartItem(productId, quantity, total) {
+function makeCartItem(productObject, quantity, total) {
+    // Makes a single cart html
     let cartContent = document.getElementById('cart-content');
     let cartItem = document.createElement('tr');
     
-    cartItem.id = productId;
+    cartItem.id = productObject.id;
     cartItem.className = 'cart-item';
     cartItem.innerHTML =
         `
         <td>
-            <button class="cart-remove-btn" onclick="removeFromCart('${productId}')">&#10005;</button>
+            <button class="cart-remove-btn" onclick="removeFromCart('${productObject.id}')">&#10005;</button>
         </td>
         <td>
             <div class="cart-img">
-                <img src="images/${products[productId].img}" alt="${productId}-image">
+                <img src="images/${productObject.img}" alt="${productObject.id}-image">
             </div>
         </td>
         <td>
             <div class="cart-item-title">
-                <a href="#${productId}">${products[productId].title}</a>
+                <a href="#${productObject.id}">${productObject.title}</a>
             </div>
         </td>
         <td>
             <div class="cart-item-buttons">
-                <button class="cart-item-increase" onclick="increaseQuantity('${productId}')">+</button>
+                <button class="cart-item-increase" onclick="increaseQuantity('${productObject.id}')">+</button>
                 <span class="cart-item-quantity">${quantity}</span>
-                <button class="cart-item-decrease" onclick="decreaseQuantity('${productId}')">-</button>
+                <button class="cart-item-decrease" onclick="decreaseQuantity('${productObject.id}')">-</button>
             </div>
         </td>
         <td>
@@ -92,8 +99,9 @@ function makeCartItem(productId, quantity, total) {
 }
 
 function loadProducts() {
-    for (let key in products) {
-        makeProduct(key);
+    // Iterates through the products array and make html for each item
+    for (let i = 0; i < products.length; i++) {
+        makeProduct(products[i]);
     }
 }
 
@@ -106,6 +114,8 @@ function updateCartTotal(cartTotal) {
 }
 
 function updateCartCount(cartCount) {
+    // Updates the innerHTML of elements with class cart-count with
+    // number of items in cart
     let cartElems = document.getElementsByClassName('cart-count');
 
     for (let i = 0; i < cartElems.length; i++) {
@@ -113,7 +123,17 @@ function updateCartCount(cartCount) {
     }
 }
 
+function getProduct(productId) {
+    // Returns a product object in products array
+    for (let i = 0; i < products.length; i++) {
+        if (products[i].id == productId) {
+            return products[i];
+        }
+    }
+}
+
 function loadCart() {
+    // Loads the content of cart to elements
     document.getElementById('cart-content').innerHTML = '';
 
     if (Object.keys(cart).length == 0) {
@@ -125,11 +145,11 @@ function loadCart() {
     let cartTotal = 0;
     let cartCount = 0;
     
-    for (let key in cart) {
-        let total = cart[key] * products[key].unitPrice;
-        makeCartItem(key, cart[key], total);
+    for (let productId in cart) {
+        let total = cart[productId] * getProduct(productId).unitPrice;
+        makeCartItem(getProduct(productId), cart[productId], total);
         cartTotal += total;
-        cartCount += cart[key];
+        cartCount += cart[productId];
     }
 
     updateCartCount(cartCount);
@@ -137,27 +157,34 @@ function loadCart() {
 }
 
 function addToCart(productId) {
+    // Adds a product object to cart dictionary
     if (!(productId in cart)) {
         cart[productId] = 1;
-    } else if (cart[productId] < products[productId].stock) {
+    } else if (cart[productId] < getProduct(productId).stock) {
         cart[productId]++;
     }
     loadCart();
 }
 
 function removeFromCart(productId) {
+    // Removes a product object from cart dictionary
     delete cart[productId];
     loadCart();
 }
 
 function increaseQuantity(productId) {
-    if (cart[productId] < products[productId].stock) {
+    // Increase the value of a object in cart
+    // if and only if, value of bject is less than stock value
+    if (cart[productId] < getProduct(productId).stock) {
         cart[productId]++;
     }
     loadCart();
 }
 
 function decreaseQuantity(productId) {
+    // Decreases the value of a object in cart
+    // if and only if, value of bject is greter than 1
+    // (avoids 0 and negatives in cart)
     if (cart[productId] > 1) {
         cart[productId]--;
     }
