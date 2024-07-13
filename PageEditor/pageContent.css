@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+}
+
+main {
+    margin: 0 auto;
+    width: 80%;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+/* ------------------- Hero ------------------ */
+
+.hero {
+    background-color: black;
+    color: white;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    align-items:end;
+    justify-content: left;
+    padding: 1em 2em;
+    font-weight: 100;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero .hero-heading {
+    font-size: 4rem;
+}
+
+
+/* ------------- Main Heading --------------- */
+
+.heading {
+    text-align: center;
+}
+
+.heading ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+}
+
+.heading ul li {
+    display: inline;
+    margin: 0 0.5em;
+    background-color: #357EC7;
+    color: #fff;
+    padding: 0.5em 0.8em;
+    border-radius: 2em;
+    transition: 0.3s;
+}
+
+.heading ul li:hover {
+    background-color: rgb(0, 96, 165);
+}
+
+.heading ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.heading h2 {
+    font-size: 3em;
+}
