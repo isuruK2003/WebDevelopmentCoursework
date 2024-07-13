@@ -7,9 +7,34 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="checkout.css">
     <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="hero.css">
 </head>
 <body>
+    <header>
+        <div class="hero">
+            <div class="hero-heading">
+                #productsStore
+            </div>
+            <div class="hero-content">
+            </div>
+        </div>
+    </header>
     <main>
+        <div class="controls">
+            <div class="sort">
+                <label for="sort-by">Sort By:</label>
+                <select name="sort-by" id="sort-by">
+                    <option value="price-asc">Price (Ascending)</option>
+                    <option value="price-des">Price (Descending)</option>
+                    <option value="name-asc">Name (Ascending)</option>
+                    <option value="name-des">Name (Descending)</option>
+                </select>                
+            </div>
+            <button id="cart-open">
+                <span class="cart-count"></span>
+                <img src="Icons/cart.svg" alt="Cart">
+            </button>
+        </div>
         <div id="products">
             <!-- product HTMLs is dynamically added by js -->
 
@@ -31,7 +56,7 @@
             <h2>Your order</h2>
             
             <div id="cart-empty">
-                <img src="/images/empty_cart.svg" alt="Empty cart image">
+                <img src="Icons/empty_cart.svg" alt="Empty cart image">
                 <p>EMPTY CART</p>
             </div>
 
@@ -69,7 +94,7 @@
             <div class="cart-controls">
                 <button>Checkout</button>
                 <div class="cart-total-section">
-                    Total: &#163;<span id="cart-total"></span>
+                    Total: &#163;<span class="cart-total"></span>
                 </div>
             </div>
         </div>
