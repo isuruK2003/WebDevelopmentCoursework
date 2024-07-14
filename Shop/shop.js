@@ -1,8 +1,8 @@
 var products = [
     {
         id: 'product-1',
-        unitPrice: 10,
-        title: 'T-Shirt',
+        unitPrice: 100,
+        title: 'a-Shirt',
         img: 'img1.webp',
         stock: 2
     },
@@ -16,7 +16,7 @@ var products = [
     {
         id: 'product-3',
         unitPrice: 30,
-        title: 'T-Shirt',
+        title: 'a-Shirt',
         img: 'img3.webp',
         stock: 30
     },
@@ -100,6 +100,8 @@ function makeCartItem(productObject, quantity, total) {
 
 function loadProducts() {
     // Iterates through the products array and make html for each item
+    document.getElementById('products').innerHTML = '';
+
     for (let i = 0; i < products.length; i++) {
         makeProduct(products[i]);
     }
@@ -191,5 +193,30 @@ function decreaseQuantity(productId) {
     loadCart();
 }
 
-loadProducts()
+function sortProducts() {
+    let key = document.getElementById('sort-by').value;
+
+    products.sort(function(a, b) {
+        let item1 = a[key];
+        let item2 = b[key];
+
+        if (key === 'title') {
+            item1 = item1.toLowerCase();
+            item2 = item2.toLowerCase();
+        }
+
+        if (item1 > item2) {
+            return 1;
+        } else if (item1 < item2) {
+            return -1;
+        } else {
+            return 0;
+        }
+    });
+
+    loadProducts();
+}
+
+
+sortProducts(); //  this also loads the products
 loadCart();
