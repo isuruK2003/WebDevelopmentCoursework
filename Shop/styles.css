@@ -112,6 +112,10 @@ main {
     border-radius: inherit;
 }
 
+.controls button#cart-open:hover {
+    background-color: #ddd;
+}
+
 .controls button#cart-open img{
     width: 1.5em;
     border-right: solid 1px #ccc;
@@ -138,4 +142,10 @@ main {
     font: inherit;
     border: none;
     background-color: inherit;
+    outline: none;
+    cursor: pointer;
+}
+
+.controls .sort:hover {
+    background-color: #ddd;
 }

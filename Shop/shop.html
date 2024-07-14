@@ -19,14 +19,13 @@
         </div>
     </header>
     <main>
+        
         <div class="controls">
             <div class="sort">
                 <label for="sort-by">Sort By:</label>
-                <select name="sort-by" id="sort-by">
-                    <option value="price-asc">Price (Ascending)</option>
-                    <option value="price-des">Price (Descending)</option>
-                    <option value="name-asc">Name (Ascending)</option>
-                    <option value="name-des">Name (Descending)</option>
+                <select name="sort-by" id="sort-by" onchange="sortProducts()">
+                    <option value="unitPrice">Price</option>
+                    <option value="title">Name</option>
                 </select>                
             </div>
             <button id="cart-open">
@@ -34,6 +33,9 @@
                 <span class="cart-count"></span>
             </button>
         </div>
+
+        <h2 style="text-align: center;">LATEST PRODUCTS</h2>
+
         <div id="products">
             <!-- product HTMLs is dynamically added by js -->
 
@@ -97,6 +99,10 @@
                 </div>
             </div>
         </div>
+
+        <button>
+            <a href="#">Back to top</a>
+        </button>
     </main>
     <script src="shop.js"></script>
     <script src="checkout.js"></script>
