@@ -2,6 +2,12 @@
     --std-border-radius:0.5em;
 }
 
+body {
+    background-image: url('background/jellyfish.jpg');
+}
+
+/* Checkout Section */
+
 .checkout {
     border: 1px solid #ccc;
     padding: 1em;
@@ -10,21 +16,19 @@
     border-radius:var(--std-border-radius);
 }
 
-.checkout fieldset {
-    border:solid 1px #ccc;
-    margin-top: 1em;
-    background-color: #eeeeee;
-    border-radius: var(--std-border-radius);
+.checkout .form-col-wrap {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
 }
 
-.checkout legend {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 0.1em 1em;
-    background-color: #ffffff;
-    border: solid 1px #ccc;
-    border-radius: 0.5em;
-    color: #333;
+.checkout .form-col {
+    border:solid 1px #ccc;
+    background-color: #eeeeee;
+    border-radius: var(--std-border-radius);
+    margin-left: 0.5em ;
+    padding: 0 0.5em;
 }
+
 
 .checkout textarea {
     padding: 0.5em;
@@ -40,6 +44,11 @@
 .checkout label {
     display: block;
     width: 100%;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    color: #444;
+    padding: 3px 0;
 }
 
 .checkout input {
@@ -63,15 +72,8 @@ input#expire-year , input#expire-month, input#cvc {
     text-align: center;
 }
 
-.form-col {
-    box-sizing: border-box;
-}
-
-.form-col-item {
-    display: inline;
-    width: 50%;
-    box-sizing: border-box;
-    float: inline-start;
+.form-row {
+    margin-bottom: 1rem;
 }
 
 .checkout .error {
@@ -80,33 +82,53 @@ input#expire-year , input#expire-month, input#cvc {
     font-style: italic;
 }
 
-/*-------------- Buttons --------------*/
+/*-------- Order Summary ----------*/
+
+.order-summary h2 {
+    text-align: center;
+}
+
+.order-summary table {
+    width: 100%;
+}
+
+.order-summary table td {
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+}
+
+.order-summary table tr.grand {
+    font-size: 1.2em;
+}
+
+
+/*-------------- Bottom Buttons --------------*/
 
 .form-buttons {
     text-align: right;
+    margin-top: 1rem;
 }
 
 .form-buttons button {
     padding: 0.5em 1em;
-    margin-left: 1em;
+    margin-left: 0.5em;
     transition: 0.3s;
 }
 
+/* Submit button */
 .form-buttons button[type='submit'] {
-    background-color: crimson;
+    background-color: rgb(20, 137, 220);
     color: #fff;
-    border: solid 1px crimson;
 }
 
 .form-buttons button[type='submit']:hover {
-    background-color: rgba(220, 20, 60, 0.173);
-    color: crimson;
+    background-color: rgb(2, 133, 170);
 }
 
+/* Reset button */
 .form-buttons button[type='reset'] {
     background-color: black;
     color: #fff;
-    border: solid 1px black;
 }
 
 .form-buttons button[type='reset']:hover {

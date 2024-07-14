@@ -65,7 +65,6 @@ button.cart-remove-btn:hover {
     padding: 0.5em 1em;
     background-color: #000;
     color: #fff;
-    border: solid 1px #000;
     transition: 0.3s;
 }
 
@@ -102,6 +101,3 @@ button.cart-remove-btn:hover {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
 }
-
-
-

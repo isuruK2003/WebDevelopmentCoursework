@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: rgb(245, 245, 245);
 }
 
@@ -8,8 +8,7 @@ button {
     font: inherit;
     cursor: pointer;
     border: none;
-    box-sizing: border-box;
-    border-radius: 2em;
+    border-radius: 0.5em;
 }
 
 a {
@@ -79,16 +78,16 @@ main {
 
 .product-button button {
     padding: 0.5em 1em;
-    background-color: #000;
+    background-color: #fff;
+    color: #000;
     border: 1px solid #000;
-    color: #fff;
     transition: 0.3s;
     font-size: 0.8em;
 }
 
 .product-button button:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: #000;
+    color: #fff;
 }
 
 /* Controls */
@@ -98,10 +97,9 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 0.5rem;
     border: solid 1px #ccc;
     border-radius: 2em;
-    font-size: 0.9rem;
     background-color: #fff;
 }
 
@@ -111,6 +109,7 @@ main {
     align-items: center;
     justify-content: space-between;
     padding: 0.5em;
+    border-radius: inherit;
 }
 
 .controls button#cart-open img{
@@ -125,6 +124,16 @@ main {
     padding: 0 0.5em;
 }
 
+.controls .sort {
+    border: solid 1px #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 1em;
+    border-radius: inherit;
+    background-color: #eee;
+}
+ 
 .controls .sort select {
     font: inherit;
     border: none;
