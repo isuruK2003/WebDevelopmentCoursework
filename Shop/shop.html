@@ -105,23 +105,27 @@
                 <fieldset>
                     <legend>Billing Information</legend>
                     <p class="form-row">
-                        <label for="fname">First name:<span id="fname-error" class="error"></span></label>
-                        <input type="text" name="fname" id="fname" required>                        
+                        <label for="fname">First name:</label>
+                        <input type="text" name="fname" id="fname" required>
+                        <span id="fname-error" class="error"><!-- Error will added by js --></span>                      
                     </p>
 
                     <p class="form-row">
-                        <label for="lname">Second name:<span id="lname-error" class="error"></span></label>
-                        <input type="text" name="lname" id="lname" required>                        
+                        <label for="lname">Second name:</label>
+                        <input type="text" name="lname" id="lname" required>
+                        <span id="lname-error" class="error"><!-- Error will added by js --></span>
                     </p>
 
                     <p class="form-row">
-                        <label for="address">Shipping address:<span id="address-error" class="error"></span></label>
-                        <input type="text" name="address" id="address" required>                        
+                        <label for="address">Shipping address:</label>
+                        <input type="text" name="address" id="address" required>
+                        <span id="address-error" class="error"><!-- Error will added by js --></span>
                     </p>
 
                     <p class="form-row">
-                        <label for="email">Email address:<span id="email-error" class="error"></span></label>
-                        <input type="email" name="email" id="email" required onchange="checkEmail(this.form)">                        
+                        <label for="email">Email address:</label>
+                        <input type="email" name="email" id="email" required onchange="checkEmail(this.form)">
+                        <span id="email-error" class="error"><!-- Error will added by js --></span>
                     </p>
 
                     <p class="form-row">
@@ -134,23 +138,25 @@
                     <legend>Payment information</legend>
                         
                     <p class="form-row">
-                        <label for="card">Card number:<span id="card-error" class="error"><!-- Error will added by js --></span></label>
-                        <input type="test" name="card" id="card" required maxlength="16" onchange="checkCardNumber(this.form)">                        
+                        <label for="card">Card number:</label>
+                        <input type="test" name="card" id="card" required maxlength="16" onchange="checkCardNumber(this.form)">
+                        <span id="card-error" class="error"><!-- Error will added by js --></span>
                     </p>
                     
 
                     <p class="form-row">
                         <p class="form-col">
                             <div class="form-col-item">
-                                <label>Expiration:<span id="expire-error" class="error"><!-- Error will added by js --></span></label>
-
+                                <label>Expiration:</label>
                                 <input type="text" name="expire-year" id="expire-year" required onchange="checkExpire(this.form)" maxlength="4" placeholder="YYYY">
                                 <span>/</span>
                                 <input type="text" name="expire-month" id="expire-month" required onchange="checkExpire(this.form)" maxlength="2" placeholder="MM">
+                                <span id="expire-error" class="error"><!-- Error will added by js --></span>
                             </div>
                             <div class="form-col-item">
-                                <label for="cvc">CVC:<span id="cvc-error" class="error"><!-- Error will added by js --></span></label>
-                                <input type="password" name="cvc" id="cvc" required maxlength="3" onchange="checkCvc(this.form)">                               
+                                <label for="cvc">CVC:</label>
+                                <input type="password" name="cvc" id="cvc" required maxlength="3" onchange="checkCvc(this.form)">
+                                <span id="cvc-error" class="error"><!-- Error will added by js --></span>
                             </div>
                         </p>                        
                     </p>
