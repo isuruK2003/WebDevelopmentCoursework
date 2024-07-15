@@ -85,12 +85,18 @@ input#expire-year , input#expire-month, input#cvc {
 
 .order-summary table {
     width: 100%;
+    table-layout: fixed;
     background-color: #fafafa;
     color: cornflowerblue;
     border: solid 1px #ccc;
     border-radius: 0.5em;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 0.5em;
+}
+
+.order-summary table td {
+    border-bottom: solid 1px #ccc;
+    padding-top: 1em;
 }
 
 .order-summary table td:nth-child(1) {
@@ -101,10 +107,6 @@ input#expire-year , input#expire-month, input#cvc {
 .order-summary table td:nth-child(2) {
     font-family:'Courier New', Courier, monospace;
     text-align: right;
-} 
-
-.order-summary table td {
-    border-bottom: solid 1px #ccc;
 }
 
 .order-summary table tr.grand {
