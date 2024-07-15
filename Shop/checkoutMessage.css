@@ -1,0 +1,26 @@
+.checkout-message-wrap {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    border-radius: 0.5em;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: solid 1px #ccc;
+    text-align: center;
+}
+
+.checkout-message-image {
+    background-color: rgb(26, 66, 106);
+    background-position: right;
+    background-size: cover;
+}
+
+.checkout-message {
+    font-weight: 350;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 2em;
+}

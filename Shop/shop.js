@@ -1,37 +1,58 @@
 var products = [
     {
         id: 'product-1',
-        unitPrice: 100,
-        title: 'a-Shirt',
-        img: 'img1.webp',
+        unitPrice: 5,
+        title: 'Sticker Pack',
+        img: 'productImages/product_1.jpg',
         stock: 2
     },
     {
         id: 'product-2',
         unitPrice: 30,
-        title: 'T-Shirt Blue',
-        img: 'img2.webp',
+        title: 'Natural Lip Balm',
+        img: 'productImages/product_2.jpg',
         stock: 10
     },
     {
         id: 'product-3',
         unitPrice: 30,
-        title: 'a-Shirt',
-        img: 'img3.webp',
+        title: 'Bio Degradable Cups and Spoon Pack',
+        img: 'productImages/product_3.jpg',
         stock: 30
     },
     {
         id: 'product-4',
         unitPrice: 30,
-        title: 'T-Shirt',
-        img: 'img4.webp',
+        title: 'Natural Cotton Stuff Animal',
+        img: 'productImages/product_4.jpg',
         stock: 50
     },
     {
         id: 'product-5',
+        unitPrice: 5,
+        title: 'Eco-friendly Soap',
+        img: 'productImages/product_5.jpg',
+        stock: 19
+    },
+    {
+        id: 'product-6',
         unitPrice: 30,
-        title: 'T-Shirt',
-        img: 'img5.webp',
+        title: 'Eco-friendly Bottle (Made with Biodegradable Plastic)',
+        img: 'productImages/product_6.jpg',
+        stock: 19
+    },
+    {
+        id: 'product-7',
+        unitPrice: 5,
+        title: 'Paper Straw Pack',
+        img: 'productImages/product_7.jpg',
+        stock: 19
+    },
+    {
+        id: 'product-8',
+        unitPrice: 30,
+        title: 'Natural Cotton T-Shirt (Lime Green Colour)',
+        img: 'productImages/product_8.jpg',
         stock: 19
     }
 ];
@@ -47,7 +68,7 @@ function makeProduct(productObject) {
     productElem.className = 'product';
     productElem.innerHTML = 
     `<div class="product-image">
-        <img src="images/${productObject.img}" alt="${productObject.id}-image">
+        <img src="${productObject.img}" alt="${productObject.id}-image">
     </div>
     <div class="product-details">
         <span class="title">${productObject.title}</span>
@@ -74,7 +95,7 @@ function makeCartItem(productObject, quantity, total) {
             <button class="cart-remove-btn" onclick="removeFromCart('${productObject.id}')">&#10005;</button>
         </td>
         <td class="cart-img">
-            <img src="images/${productObject.img}" alt="${productObject.id}-image">
+            <img src="${productObject.img}" alt="${productObject.id}-image">
         </td>
         <td class="cart-item-title">
             <a href="#${productObject.id}">${productObject.title}</a>

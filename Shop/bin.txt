@@ -77,3 +77,35 @@
         <div class="cart-item-total">&#163;10</div>
     </div> -->                
 </div>
+---------------------------------------------
+/* .checkout-message-wrap {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 0.5em;
+    overflow: hidden;
+    border: solid 1px #ccc;
+    background-color: #fff;
+}
+
+.checkout-message-image {
+    display: inline;
+    float: left;
+    width: 30%;
+    position: relative;
+}
+
+.checkout-message-image img {
+    position: absolute;
+    width: 100%;
+}
+
+.checkout-message {
+    display: inline;
+    width: 70%;
+    float: right;
+    text-align: center;
+}
+
+.checkout-message p {
+    font-weight: 100;
+    padding: 3em;
+} */
