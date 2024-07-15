@@ -73,15 +73,11 @@ function makeCartItem(productObject, quantity, total) {
         <td>
             <button class="cart-remove-btn" onclick="removeFromCart('${productObject.id}')">&#10005;</button>
         </td>
-        <td>
-            <div class="cart-img">
-                <img src="images/${productObject.img}" alt="${productObject.id}-image">
-            </div>
+        <td class="cart-img">
+            <img src="images/${productObject.img}" alt="${productObject.id}-image">
         </td>
-        <td>
-            <div class="cart-item-title">
-                <a href="#${productObject.id}">${productObject.title}</a>
-            </div>
+        <td class="cart-item-title">
+            <a href="#${productObject.id}">${productObject.title}</a>
         </td>
         <td>
             <div class="cart-item-buttons">
@@ -90,8 +86,8 @@ function makeCartItem(productObject, quantity, total) {
                 <button class="cart-item-decrease" onclick="decreaseQuantity('${productObject.id}')">-</button>
             </div>
         </td>
-        <td>
-            <div class="cart-item-total">&#163;${total}</div>
+        <td class="cart-item-total">
+            &#163;${total}
         </td>
         `;
     
@@ -109,9 +105,11 @@ function loadProducts() {
 
 function updateCartTotal(cartTotal) {
     let cartElems = document.getElementsByClassName('cart-total');
+    let cartTotalInput = document.getElementsByName('cart-total')[0];
 
     for (let i = 0; i < cartElems.length; i++) {
-        cartElems[0].innerHTML = cartTotal;
+        cartElems[i].innerHTML = cartTotal;
+        cartTotalInput.value = cartTotal;
     }
 }
 

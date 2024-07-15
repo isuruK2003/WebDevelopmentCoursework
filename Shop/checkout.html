@@ -6,8 +6,26 @@
     <title>Checkout</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="navbar.css">
 </head>
 <body>
+    <!--Navbar-->
+    <nav>
+        <div class="logo">
+            <a href="#" class="logo"><img src="Icons/logo.jpg" alt="our logo"></a>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Galary</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </div>
+     </nav>
+    
+     <!-- Main Content -->
     <main>
         <div class="checkout">
             <h2 style="text-align: center;">Checkout</h2>
@@ -17,22 +35,34 @@
                 <div class="form-col-wrap">
 
                     <div class="form-col">
-                        <div class="order-summary">
-                            <h3>Order Summary</h3>
-                            <table>
-                                <tr>
-                                    <td>Products Total</td>
-                                    <td>&#163;100</td>
-                                </tr>
-                                <tr>
-                                    <td>Tax</td>
-                                    <td>&#163;5</td>
-                                </tr>
-                                <tr class="grand">
-                                    <td>Grand Total</td>
-                                    <td>&#163;108</td>
-                                </tr>
-                            </table>
+                        <div class="order-info">
+                            <div class="order-summary">
+                                <h3>Order Summary</h3>
+                                <table>
+                                    <tr>
+                                        <td>Products Total</td>
+                                        <td>&#163;<span id="cart-total">0</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>VAT</td>
+                                        <td>&#163;<span id="tax">0</span></td>
+                                    </tr>
+                                    <tr class="grand">
+                                        <td>Grand Total</td>
+                                        <td>&#163;<span id="grand-total">0</span></td>
+                                    </tr>
+                                </table>                                
+                            </div>
+                            <div class="order-terms">
+                                <h3>Terms and conditions</h3>
+                                <ul>
+                                    <li>Value Added Tax (VAT) is charged for packaging and other costs related to shipping.</li>
+                                    <li>Returns are accepted within 7 days of delivery.</li>
+                                    <li>Items must be returned in their original condition and packaging.</li>
+                                    <li>For returning please contact us via Email</li>
+
+                                </ul>
+                            </div>
                         </div>
                     </div>
         
@@ -89,6 +119,13 @@
                             <label for="cvc">CVC:</label>
                             <input type="password" name="cvc" id="cvc" required maxlength="3" onchange="checkCvc(this.form)">
                             <span id="cvc-error" class="error"><!-- Error will added by js --></span>
+                        </div>
+
+                        <div class="form-row cards">
+                            <img src="Icons/visa.png" alt="visa">
+                            <img src="Icons/american-express.png" alt="American Express">
+                            <img src="Icons/masters.png" alt="Masters">
+                            <p> We only accept the all :)</p>
                         </div>
                     </div>
                 </div>

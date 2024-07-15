@@ -109,3 +109,17 @@ function resetForm(formRef) {
         document.getElementById(`${toCheck[i]}-error`).innerHTML = '';
     }
 }
+
+function updateTotal() {
+    let params = new URLSearchParams(document.location.search);
+    let cartTotal = parseInt(params.get("cart-total"));
+    let tax = cartTotal * (5 / 100);
+    let grandTotal = cartTotal + tax;
+
+    document.getElementById('cart-total').innerHTML = cartTotal;
+    document.getElementById('tax').innerHTML = tax;
+    document.getElementById('grand-total').innerHTML = grandTotal;
+
+}
+
+updateTotal()

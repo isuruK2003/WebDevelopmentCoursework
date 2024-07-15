@@ -7,8 +7,26 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="navbar.css">
 </head>
 <body>
+    <!--Navbar-->
+    <nav>
+        <div class="logo">
+            <a href="#" class="logo"><img src="Icons/logo.jpg" alt="our logo"></a>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Galary</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
     <header>
         <div class="hero">
             <div class="hero-heading">
@@ -18,8 +36,9 @@
             </div>
         </div>
     </header>
+
+    <!-- Main Content -->
     <main>
-        
         <div class="controls">
             <div class="sort">
                 <label for="sort-by">Sort By:</label>
@@ -61,43 +80,42 @@
                 <p>EMPTY CART</p>
             </div>
 
-            <table id="cart-content">
+            <form action="checkout.html" method="get">
+                <table id="cart-content">
 
-                <!-- Cart item HTML will be added by javascript -->
+                    <!-- Cart item HTML will be added by javascript -->
 
-                <!-- <tr id="product-1" class="cart-item">
-                    <td>
-                        <button class="cart-remove-btn" onclick="removeFromCart('product-1')">&#10005;</button>
-                    </td>
-                    <td>
-                        <div class="cart-img">
+                    <!-- <tr id="product-1" class="cart-item">
+                        <td>
+                            <button class="cart-remove-btn" onclick="removeFromCart('product-1')">&#10005;</button>
+                        </td>
+                        <td class="cart-img">
                             <img src="images/img1.webp" alt="product-1-image">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="cart-item-title">
+                        </td>
+                        <td class="cart-item-title">
                             <a href="#product-1">Product Description</a>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="cart-item-buttons">
-                            <button class="cart-item-increase" onclick="increaseQuantity('product-1')">+</button>
-                            <span class="cart-item-quantity">1</span>
-                            <button class="cart-item-decrease" onclick="decreaseQuantity('product-1')">-</button>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="cart-item-total">&#163;10</div>
-                    </td>
-                </tr> -->
-            </table>
+                        </td>
+                        <td>
+                            <div class="cart-item-buttons">
+                                <button class="cart-item-increase" onclick="increaseQuantity('product-1')">+</button>
+                                <span class="cart-item-quantity">1</span>
+                                <button class="cart-item-decrease" onclick="decreaseQuantity('product-1')">-</button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cart-item-total">&#163;10</div>
+                        </td>
+                    </tr> -->
+                </table>
 
-            <div class="cart-controls">
-                <button>Checkout</button>
-                <div class="cart-total-section">
-                    Total: &#163;<span class="cart-total"></span>
+                <div class="cart-controls">
+                    <button type="submit">Checkout</button>
+                    <div class="cart-total-section">
+                        Total: &#163;<span class="cart-total"></span>
+                        <input name="cart-total" type="number" readonly value="0" hidden>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
 
         <button>

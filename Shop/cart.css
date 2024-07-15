@@ -53,26 +53,6 @@ button.cart-remove-btn:hover {
     background-color: rgba(255, 0, 0, 0.5);
 }
 
-/*--- Cart controls ---*/
-
-.cart-controls {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.cart-controls button {
-    padding: 0.5em 1em;
-    background-color: #000;
-    color: #fff;
-    transition: 0.3s;
-}
-
-.cart-controls button:hover {
-    background-color: #ccc;
-    color: #000;
-}
-
 /*--- Cart Increase - decrease buttons ---*/
 
 .cart-item-buttons {
@@ -95,9 +75,42 @@ button.cart-remove-btn:hover {
     color: white;
 }
 
+/*--- Cart controls ---*/
+
+.cart-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-controls button {
+    padding: 0.5em 1em;
+    background-color: #000;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.cart-controls button:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
 /*--- Cart totals section ---*/
 
 .cart-total-section {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
+}
+
+
+.cart-total-section input {
+    background-color: inherit;
+    font: inherit;
+    border: none;
+    width: 5em;
+    text-align: right;
+}
+
+.cart-total-section input:focus {
+    outline: none;
 }
