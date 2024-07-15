@@ -4,16 +4,16 @@ function isNumeric(stringNum) {
 
 function checkCardNumber(formRef) {
     let cardNum = formRef.card.value;
+    
     let cardError = document.getElementById('card-error');
 
     if (cardNum == '') {
         cardError.innerHTML = '* Cannot be blank';
 
-    } else if (isNaN(parseFloat(cardNum))) {
+    } else if (isNaN(parseInt(cardNum))) {
         cardError.innerHTML = '* Invalid card number';
 
     } else if (cardNum.length != 16) {
-        console.log(cardNum.length);
         cardError.innerHTML = '* Should be 16 digit number';
 
     } else {

@@ -36,6 +36,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     border: 1px solid #ccc;
     overflow: hidden; /*to avoid image to overflow*/
     padding:0 0 1em;
@@ -58,8 +59,14 @@ main {
 }
 
 .product-image img:hover {
-    
     transform: scale(1.5);
+}
+
+.product-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .product .title , .product-details .price {
@@ -76,7 +83,7 @@ main {
     font-family: 'Courier New', Courier, monospace;
 }
 
-.product-button button {
+button.add-button {
     padding: 0.5em 1em;
     background-color: #fff;
     color: #000;
@@ -85,7 +92,7 @@ main {
     font-size: 0.8em;
 }
 
-.product-button button:hover {
+button.add-button:hover {
     background-color: #000;
     color: #fff;
 }

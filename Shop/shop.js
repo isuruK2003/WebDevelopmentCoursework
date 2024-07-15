@@ -73,9 +73,9 @@ function makeProduct(productObject) {
     <div class="product-details">
         <span class="title">${productObject.title}</span>
         <span class="price">&#163;${productObject.unitPrice}</span>
-    </div>
-    <div class="product-button">
-        <button class="add-button" onclick="addToCart('${productObject.id}')">Add to Cart</button>
+        <button class="add-button" onclick="addToCart('${productObject.id}')">
+            Add to Cart
+        </button>
     </div>`;
 
     productsElem.appendChild(productElem);
