@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta http-equiv="refresh" content="4;shop.html"> -->
+    <meta http-equiv="refresh" content="4;shop.html">
     <title>Life below water</title>
     <link rel="stylesheet" href="css/splash.css">
 </head>
@@ -11,14 +11,13 @@
     <div class="container">
         <div class="top">
             <div class="heading">Life Below Water</div>
-            <div class="mission">
-                Let's conserve and sustainably use the oceans, seas and marine resources for sustainable development.
+            <div class="mission" id="mission"></div>
+            <div class="loader-wrap">
+                <div class="loader"></div><span>Loading...</span>
             </div>
         </div>
         <div class="bottom">
-            <div class="message">
-                Our Team
-            </div>
+            <span>Collaborative website built with</span>
             <div class="people">
                 <div class="person">
                     <div class="image">
@@ -30,22 +29,41 @@
                     <div class="image">
                         <img src="images/splash/lalindu.jpg" alt="ladivndu">
                     </div>
-                    <div class="name">Isuru Karunaratna</div>
+                    <div class="name">Lalindu Jayasinghe</div>
                 </div>
                 <div class="person">
                     <div class="image">
                         <img src="images/splash/lalindu.jpg" alt="ladivndu">
                     </div>
-                    <div class="name">Isuru Karunaratna</div>
+                    <div class="name">Dinuka Viraji</div>
                 </div>
                 <div class="person">
                     <div class="image">
                         <img src="images/splash/lalindu.jpg" alt="ladivndu">
                     </div>
-                    <div class="name">Isuru Karunaratna</div>
+                    <div class="name">Mewanya Lokuge</div>
                 </div>
-            </ul>
+            </div>
         </div>
     </div>
+    <script>
+    function typeWriter(id, text) {
+        const elem = document.getElementById(id);
+        let i = 0;
+    
+        function type() {
+            if (i < text.length) {
+                elem.textContent += text.charAt(i);
+                i++;
+                setTimeout(type, 50);
+            } else {
+                createPrompt();
+            }
+        }
+        type();
+    }
+    
+    typeWriter('mission', "Let's conserve marine resources.")
+    </script>
 </body>
 </html>

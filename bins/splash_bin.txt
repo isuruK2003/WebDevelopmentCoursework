@@ -118,3 +118,58 @@ li.person {
 } */
 
 /* With flex */
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.bottom .message {
+    float: left;
+    width: 40%;
+    font-size: 1.5em;
+    text-align: right;
+    display: table-cell;
+    vertical-align:middle;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.bottom .people {
+    float: right;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    bottom: 0;
+}
+
+.person .image {
+    overflow: hidden;
+    height: 100%;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    padding: 6px;
+    background-color: #666;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.person img {
+    width: 100%;
+}
+ */

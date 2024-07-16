@@ -10,53 +10,53 @@ body {
 
 .container {
     height: 100vh;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .top {
-    height: 90vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
     background-image: linear-gradient(black, transparent, black);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .top .heading {
-    font-size: 5em;
-    text-shadow: 0px 0px 5px #000;
+    font-size: 5.5em;
+    font-weight: 100;
+    color: rgb(233, 244, 255);
 }
 
 .top .mission {
-    font-size: 1.5em;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.8em;
+    font-style: italic;
 }
 
 .bottom {
-    height: 10vh;
-    /* display: grid;
-    grid-template-columns: 40% 60%; */
-    width: 100%;
-    background-color: black;
-}
-
-.bottom .message {
-    float: left;
-    width: 40%;
-    font-size: 1.5em;
-    text-align: right;
-    display: table-cell;
-    vertical-align:middle;
-    font-family:'Courier New', Courier, monospace;
-}
-
-.bottom .people {
-    float: right;
-    width: 60%;
+    height: 20vh;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    background-color: black;
+    color: #aaa;
+    font-weight: 250;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.bottom > span {
+    font-size: 1.5em;
+    padding-right: 3em;
+}
+
+.people {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 2em;
 }
 
 .person {
@@ -64,22 +64,69 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    bottom: 0;
+    padding: 1em;
 }
 
 .person .image {
+    background-color: #aaa;
+    width: 70px;
+    height: 70px;
     overflow: hidden;
-    height: 100%;
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    padding: 6px;
-    background-color: #666;
-    box-sizing: border-box;
-    overflow: hidden;
+    border-radius: 35px;
 }
 
 .person img {
     width: 100%;
 }
 
+.person .name {
+    padding: 10px;
+}
+
+
+/* Loader */
+
+.loader-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-style: italic;
+    border-bottom: solid 1px #fff;
+    padding-bottom: 1em;
+}
+
+.loader {
+    display: inline;
+    margin: 0 1rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    border: solid 0.25rem #969696;
+    border-top: solid 0.25rem #0056c0;
+
+    -webkit-animation: spin 0.9s linear infinite;
+    animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes spin {
+    /* for Apple Devices */
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+/* Animations */
+
+.top .heading, .bottom span, .bottom .people, .loader-wrap{
+    animation-name: appear;
+    animation-duration: 1.5s;
+}
+
+@keyframes appear {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}

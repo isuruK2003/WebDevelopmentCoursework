@@ -215,23 +215,27 @@ function decreaseQuantity(productId) {
 function sortProducts() {
     let key = document.getElementById('sort-by').value;
 
-    products.sort(function(a, b) {
-        let item1 = a[key];
-        let item2 = b[key];
+    products.sort(
+        function(a, b) {
+            let item1 = a[key];
+            let item2 = b[key];
 
-        if (key === 'title') {
-            item1 = item1.toLowerCase();
-            item2 = item2.toLowerCase();
-        }
+            if (key === 'title') {
+                item1 = item1.toLowerCase();
+                item2 = item2.toLowerCase();
+            }
 
-        if (item1 > item2) {
-            return 1;
-        } else if (item1 < item2) {
-            return -1;
-        } else {
-            return 0;
+            if (item1 > item2) {
+                return 1;
+
+            } else if (item1 < item2) {
+                return -1;
+                
+            } else {
+                return 0;
+            }
         }
-    });
+    );
 
     loadProducts();
 }
