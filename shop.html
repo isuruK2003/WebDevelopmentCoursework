@@ -78,7 +78,7 @@
                 <p>EMPTY CART</p>
             </div>
 
-            <form action="checkout.html" method="get">
+            <form action="checkout.html" method="get" onsubmit="submitCheck()">
                 <table id="cart-content">
 
                     <!-- Cart item HTML will be added by javascript -->
@@ -108,8 +108,9 @@
 
                 <div class="cart-controls">
                     <button type="submit">Checkout</button>
+                    <span id="cart-error" class="error"></span>
                     <div class="cart-total-section">
-                        Total: &#163;<span class="cart-total"></span>
+                        Total: &#163; <span class="cart-total"></span>
                         <input name="cart-total" type="number" readonly value="0" hidden>
                     </div>
                 </div>

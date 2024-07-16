@@ -75,12 +75,6 @@ input#expire-year , input#expire-month, input#cvc {
     margin-bottom: 1rem;
 }
 
-.checkout .error {
-    display: block;
-    color: rgba(255, 0, 0, 0.5);
-    font-style: italic;
-}
-
 /*-------- Order Summary ----------*/
 
 .order-summary table {

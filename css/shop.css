@@ -193,3 +193,11 @@ button.add-button:hover {
 .controls .sort:hover {
     background-color: #ddd;
 }
+
+/* inline error message */
+
+.error {
+    display: block;
+    color: rgba(255, 0, 0, 0.5);
+    font-style: italic;
+}
