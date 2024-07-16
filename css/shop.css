@@ -134,6 +134,11 @@ button.add-button:hover {
     color: #fff;
 }
 
+button.add-button:active {
+    background-color: #494949;
+    color: #fff;
+}
+
 /* Top Controls bar (Sorting and cart icon)*/
 
 .controls {

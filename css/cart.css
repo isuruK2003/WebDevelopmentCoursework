@@ -114,3 +114,39 @@ button.cart-remove-btn:hover {
 .cart-total-section input:focus {
     outline: none;
 }
+
+/* Cart Popup  */
+
+.cart-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cart {
+    width: 80%;
+    max-width: 800px;
+    margin: 10vh auto;
+}
+
+.cart-close {
+    text-align: right;
+}
+
+.cart-close button {
+    background-color: #ffffff;
+}
+
+.cart .cart-content {
+    margin: 1em 0;
+    padding: 0 1em;
+    max-height: 60vh;
+    overflow: auto;
+}
