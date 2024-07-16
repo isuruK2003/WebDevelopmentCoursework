@@ -3,56 +3,56 @@ var products = [
         id: 'product-1',
         unitPrice: 5,
         title: 'Sticker Pack',
-        img: 'productImages/product_1.jpg',
+        img: 'images/shop/products/product_1.jpg',
         stock: 2
     },
     {
         id: 'product-2',
         unitPrice: 30,
         title: 'Natural Lip Balm',
-        img: 'productImages/product_2.jpg',
+        img: 'images/shop/products/product_2.jpg',
         stock: 10
     },
     {
         id: 'product-3',
         unitPrice: 30,
         title: 'Bio Degradable Cups and Spoon Pack',
-        img: 'productImages/product_3.jpg',
+        img: 'images/shop/products/product_3.jpg',
         stock: 30
     },
     {
         id: 'product-4',
         unitPrice: 30,
         title: 'Natural Cotton Stuff Animal',
-        img: 'productImages/product_4.jpg',
+        img: 'images/shop/products/product_4.jpg',
         stock: 50
     },
     {
         id: 'product-5',
         unitPrice: 5,
         title: 'Eco-friendly Soap',
-        img: 'productImages/product_5.jpg',
+        img: 'images/shop/products/product_5.jpg',
         stock: 19
     },
     {
         id: 'product-6',
         unitPrice: 30,
         title: 'Eco-friendly Bottle (Made with Biodegradable Plastic)',
-        img: 'productImages/product_6.jpg',
+        img: 'images/shop/products/product_6.jpg',
         stock: 19
     },
     {
         id: 'product-7',
         unitPrice: 5,
         title: 'Paper Straw Pack',
-        img: 'productImages/product_7.jpg',
+        img: 'images/shop/products/product_7.jpg',
         stock: 19
     },
     {
         id: 'product-8',
         unitPrice: 30,
         title: 'Natural Cotton T-Shirt (Lime Green Colour)',
-        img: 'productImages/product_8.jpg',
+        img: 'images/shop/products/product_8.jpg',
         stock: 19
     }
 ];

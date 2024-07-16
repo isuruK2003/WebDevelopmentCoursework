@@ -1,0 +1,50 @@
+header {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    background-color: cornflowerblue;
+    background-image: url('backgrounds/coral_bg.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+header p {
+    text-align: center;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+} 
+
+main {
+    max-width: 800px;
+}
+
+.container {
+    margin: 1em 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-radius: 0.5em;
+    overflow: hidden;
+    height: 400px;
+}
+
+.container img {
+    width: 100%;
+}
+
+.contain-text {
+    padding: 2em 1em;
+}
