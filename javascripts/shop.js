@@ -253,5 +253,17 @@ function submitCheck() {
     }
 }
 
+
+function closeCart() {
+    document.getElementById('cart').style.display = 'none';
+}
+
+function openCart() {
+    loadCart();
+    document.getElementById('cart').style.display = 'block';
+
+}
+
+closeCart();
 sortProducts(); //  this also loads the products
 loadCart();

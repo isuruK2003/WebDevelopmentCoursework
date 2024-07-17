@@ -48,7 +48,7 @@
                     <option value="title">Name</option>
                 </select>                
             </div>
-            <button id="cart-open" onclick="document.getElementById('cart').style.display='block'">
+            <button id="cart-open" onclick="openCart()">
                 <img src="Icons/cart.svg" alt="Cart">
                 <span class="cart-count"></span>
             </button>
@@ -74,7 +74,7 @@
         <div id="cart" class="cart-wrap">
             <div class="cart">
                 <div class="cart-close">
-                    <button onclick="document.getElementById('cart').style.display = 'none'">&#10005;</button>
+                    <button onclick="closeCart()">&#10005;</button>
                 </div>
                 <h2>Your order</h2>
             

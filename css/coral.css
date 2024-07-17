@@ -1,32 +1,40 @@
-header {
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2em;
-    background-color: cornflowerblue;
-    background-image: url('backgrounds/coral_bg.jpg');
-    background-position: center;
-    background-size: cover;
+.hero {
+    justify-content: space-evenly;
 }
 
-header p {
-    text-align: center;
+.hero .hero-heading {
+    font-size: 4em;
 }
 
-header ul {
+.hero-content {
+    font-size: 0.9em;
+}
+
+.hero ul {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
 }
 
-header a {
-    color: inherit;
+.hero ul li {
+    display: inline-block;
+}
+
+.hero ul li a {
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    border-radius: 0.5em;
+    background-color: rgb(0, 103, 205);
+    color: #fff;
+    transition: 0.3s;
+    border: solid 3px rgba(2, 72, 143, 0.455);
+}
+
+.hero ul li a:hover {
+    background-color: rgb(1, 64, 128);
     text-decoration: none;
 }
 
-header a:hover {
-    text-decoration: underline;
-} 
 
 main {
     max-width: 800px;
@@ -39,12 +47,16 @@ main {
     border-radius: 0.5em;
     overflow: hidden;
     height: 400px;
+    border: solid 1px #ccc;
+    background-color: #fff;
 }
 
-.container img {
+
+.contain-img img {
     width: 100%;
 }
 
 .contain-text {
+    background-color: #fff;
     padding: 2em 1em;
 }
