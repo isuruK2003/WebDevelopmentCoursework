@@ -264,6 +264,6 @@ function openCart() {
 
 }
 
-closeCart();
+
 sortProducts(); //  this also loads the products
 loadCart();

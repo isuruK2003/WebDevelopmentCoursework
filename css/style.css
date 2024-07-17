@@ -1,3 +1,5 @@
+/* Navbar */
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -40,6 +42,24 @@ nav a {
 .logo img {
     height: 1.8em;
 }
+
+.user-img{
+    margin-left: 1em;
+    overflow: hidden;
+    border-radius: 50%;
+    height: 1.8em;
+    background-color: #243676;
+    padding:0.5em;
+}
+
+.user-img  a img{
+    height: 100%;
+}
+
+.user-img:hover {
+    background-color: #364ea6;
+}
+
 /* Footer */
 
 footer {
