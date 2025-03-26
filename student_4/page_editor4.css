@@ -1,0 +1,24 @@
+body {
+    background-color: #6495ED;
+}
+h1{
+    text-align: center;
+    color: black;
+}
+
+.details {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid black;
+}
+
+.gallery, .sitemap, .content {
+    text-align: center;
+}
+
+a {
+    text-align: center;
+    color: #030637;
+}

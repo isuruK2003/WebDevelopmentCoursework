@@ -1,0 +1,119 @@
+/* Navbar */
+* {
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    background-color: #111e4d;
+    color: #ccc;
+    padding: 10px 30px 2px 7%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav-links li:hover {
+    color: #fff;
+    background-color:#243676;
+}
+
+.logo img {
+    height: 1.8em;
+}
+
+.user-img{
+    margin-left: 1em;
+    overflow: hidden;
+    border-radius: 50%;
+    height: 1.8em;
+    background-color: #243676;
+    padding:0.5em;
+}
+
+.user-img  a img{
+    height: 100%;
+}
+
+.user-img:hover {
+    background-color: #364ea6;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111e4d;
+    color: white;
+    height: 200px;
+}
+footer h4{
+    text-align: center;
+    text-decoration: underline;
+}
+footer a{
+    color: white;
+    display: flex;
+    margin-bottom: 9px;
+}
+footer a:hover{
+    text-decoration: underline;
+    color: aqua;
+}
+footer div{
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer div .footer-content{
+    text-align: left;
+}
+
+footer div .contentpage{
+    text-align: right;
+}
+.contentpage{
+    float: right;
+}
+.footer-content{
+    float: center;
+}
+.student{
+    float: left;
+    text-align: left;   
+}
+p {
+    font-size: 18px;
+    margin: 25px 0 30px;
+    font-weight: 600;
+    padding-left: 20px;
+}

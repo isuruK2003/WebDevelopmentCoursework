@@ -1,0 +1,318 @@
+/* Keyframes for animation */
+@keyframes upDownAnimation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Global reset for margins, padding, and font */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", Times, serif; /* Change font to Times New Roman */
+}
+
+
+/* Styles for HTML and body */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.sec{
+    margin-top: 95px;
+}
+
+
+/* Styles for the main content section */
+.content {
+    background: url(fishman.jpg);
+    background-size: cover;
+    text-align: center;
+    color: #000000;
+    padding-top: 180px;
+    z-index: 4;
+}
+
+.content h1 {
+    font-size: 5em; /* Adjust the font size as needed */
+    animation: upDownAnimation 3s ease-in-out infinite; /* Apply animation to .content */
+}
+
+.content p {
+    font-style: italic;
+    font-size: 1.2em; /* Adjust the font size as needed */
+    animation: upDownAnimation 3s ease-in-out infinite; /* Apply animation to .content */
+}
+
+.content button {
+    font-weight: bold;
+    width: 200px;
+    height: 50px;
+    margin-top: 2%;
+    margin-bottom: 260px;
+    color: rgba(0, 0, 0, 0.767);
+    font-size: 1.1em;
+    background-color: transparent;
+    border: 4px solid #000000;
+    padding: 0px 30px;
+    border-radius: 10px;
+    animation: upDownAnimation 3s ease-in-out infinite;
+}
+
+.content button:hover{
+    background-color: #000000; /* Change background color on hover */
+    color: rgb(255, 255, 255); /* Change text color on hover */
+}
+
+.course{
+    font-size: 2.5em;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 100px;
+}
+
+.course p{
+    font-size: medium;
+}
+
+.wrapper{
+    margin-left: 280px;
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+}
+
+/* Styles for the card section */
+.card {
+    position: relative; /* Make the card container relative */
+    width: 300px;
+    height: 360px;
+    padding: 0rem 0rem;
+    border-radius: 50px;
+    background: #fff;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    margin: 20px;
+}
+
+
+.card img {
+    border-radius: 50px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+.card .info {
+    position: absolute;
+    bottom: 0; /* Position info at the bottom of the card */
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Add padding for better readability */
+    background: linear-gradient(to bottom, rgba(185, 240, 234, 0.5), rgb(74, 171, 105));
+    border-radius: 50px;
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+}
+
+.card .info h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.2em; /* Adjust font size as needed */
+}
+
+.card .info p {
+    text-align: center;
+    margin: 5px 0; /* Add margin for better spacing */
+    font-size: 1em; /* Adjust font size as needed */
+}
+
+.card:hover {
+    transform: translateY(-30px); /* Move the card up by 10px when hovered */
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.7); /* Increase the shadow when hovered */
+}
+
+.card:hover .info {
+    opacity: 1; /* Show the info section when the card is hovered */
+}
+
+.card .info .btn{
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.card .info .btn:hover{
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.7);
+}
+
+/* Styles for the home section */
+.home {
+    background: url(pro.jpeg);
+    background-size: cover;
+    font-size: 2.5em;
+    width: auto;
+    height: 450px;
+    margin-top: 100px;
+    text-align: center;
+    padding: 100px;
+}
+
+.home-content{
+    max-width: 580px;
+    ;
+}
+
+.home-content h1{
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 1.2;
+    color: #0b0000;
+
+}
+
+.home-content h3{
+    font-size: 40px;
+    color: #100101f7;
+}
+
+.home-content p{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 15px 0 30px;
+    color: #130202;
+}
+
+.home-content .btn{
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px 28px;
+    background: #010db9;
+    border: 2px solid#0338c9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(23, 1, 83, 0.1);
+    font-size: 16px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600px;
+    transition: 0.5s;
+
+}
+
+.btn:hover{
+    background: transparent;
+    color: #ffffff;
+}
+
+/* Styles for the about section */
+.about {
+    font-size: 2.5em;
+    width: auto;
+    margin-top: 20px;
+    text-align: center;
+    padding: 100px;
+}
+
+.about h1{
+    font-weight: bold;
+    font-size: 50px;
+
+}
+
+.about p{
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 2px 0; /* Add margin for better spacing */
+}    
+
+.about-image {
+    width: 1200px; /* Set your desired width */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 50px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Lato&display=swap');
+
+
+/*.content {
+    width: 100%;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.footer-grids {
+    background: #010985;
+    height: 265px;
+    padding-left: 40px;
+}
+
+p.footer-gd {
+    color: #f0d89d;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0 12px;
+}
+
+
+.footer {
+    float: left;
+}
+
+.footer h3 {
+    font-size: 30px;
+    color: #f0d89d;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.footer.one {
+    width: 35%;
+}
+
+.footer.two {
+    width: 23%;
+}
+
+.footer.one p {
+    color: #f0d89d;
+    line-height: 20px;
+    font-size: 16px;
+}
+
+
+.footer.two p {
+    color: #f0d89d;
+    line-height: 20px;
+    font-size: 16px;
+}
+
+
+.copy-right-grids {
+    padding: 10px;
+    background: #0226c5;
+    height: 60px;
+}
+
+.copy-left {
+    float: left;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedBack</title>
+    <link rel="stylesheet" href="feedback.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="feedback.js"> </script>
+</head>
+<body>
+    <!--Navbar-->
+    <nav>
+        <div class="logo">
+            <a href="home.html" class="logo">
+                <img src="logo.jpg" alt="our logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="../../student_4/gallery.html">Gallary</a></li>
+                <li><a href="../../student_1/shop.html">Shop</a></li>
+                <li><a href="../../student_4/sitemap.html">Sitemap</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="../../student_3/About/AB.html">About Us</a></li>
+            </ul>
+        </div>
+        </nav>
+        
+    <section>
+            <form id="form" method="get"> 
+                <h1>FeedBack form</h1>
+               <div class="form">
+                    <div class="name">
+                        <span id="error"></span>
+                        <br>
+                            <label for="name"><span class="blue">A</span>.NAME <span>*</span>:
+                                <input type="text" name="name" id="name" placeholder="Enter your name">
+                                
+                            </label>  
+                    </div>
+                    <br>
+                    <div class="name">
+                    <li>
+                        <label for="email"><span class="blue">B</span>.Email<span>*</span>:
+                            <input type="email" name="email" id="email" placeholder="Enter your email" >
+                        </label>
+                    </li>
+                    </div>
+    
+                    <br>
+                            <label><span class="blue">C</span>.Was this is your first time visiting ?
+                                <div class="k">
+                                    <label for="yes"><input type="radio" name="visit" id="yes">YES</label>
+                                    <label for="no"><input type="radio" name="visit" id="no">NO</label>
+                                </div>
+                            </label>
+                            <label><span class="blue">D</span>.Was this website helpful ?<span>*</span>
+                                <div class="k">
+                                    <label for="yes"><input type="radio" name="helpful" id="yes">YES</label>
+                                    <label for="no"><input type="radio" name="helpful" id="no">NO</label>
+                            
+                                </div>
+                            </label>
+                        <label><span class="blue">E</span>.Rate your experience when navigating throughthis website <span>*</span>:
+                            <br>
+                                <label>Rate
+                                    <select name="rate" id="rate">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </label>
+                        </label>
+                    <br>
+                    <br>
+                        <label><span class="blue">F</span>.Any your sugestion <br>
+                            <textarea name="sugestion" id="sugestion" cols="30" rows="4"></textarea>
+                        </label>
+                    <br>
+                        <label><span class="blue">G</span>.Would you recomend your service
+                            <div class="k">
+                                <label for="yes"><input type="radio" name="recomend" id="yes">YES</label>
+                                <label for="no"><input type="radio" name="recomend" id="no">NO</label>
+                            </div>
+                        </label> 
+                        <label><span class="blue">H</span>.Would you like to stay connected
+                            <br> 
+                                <select name="update" id="update">
+                                    <option value="yes" selected>Yes-via emil</option>
+                                    <option value="no">No</option>
+                                </select>
+                        </label>
+                        <br>
+                        <br>
+                        <label><span class="blue">I</span>. Your comments:
+                            <br>
+                        
+                            <textarea name="comments" id="comments" cols="30" rows="5"></textarea>
+                        </label>
+               </div>
+
+                <button type="submit" class="submit">Submit</button>
+            </form>
+    </section>
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                 <p>Copyright &copy; 2024 <br>
+                     All rights reserved</p>
+                 <a href="pageeditor.html"><p>Developed by Lalindu S jayasinghe</p></a>
+            </div>
+             <div class="contentpage">
+             <h4>More content</h4>
+                 <a href="../../student_3/Content Page/content.html">Economic values of oceans</a>
+                 <a href="../../student_4/content_page_student4.html">Marine biodiversity conservation</a>
+                 <a href="article03.html">The Impact of Plastics on Marine Life</a>
+                 <a href="../../student_1/coralConservation.html">Coral reef conservation</a>  
+             </div>
+             <div class="student">
+                 <h4>Our Team</h4>
+                 <ol>
+                     <li>Student 1 - Isuru Karunaratna</li>
+                     <li>Student 2 - Lalindu S jayasinghe</li>
+                     <li>Student 3 - Mewanya Lokuge</li>
+                     <li>Student 4 - Dinuka Viraji</li>
+                 </ol>
+             </div>
+         </footer>
+</body>
+</html>

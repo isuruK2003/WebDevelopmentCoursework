@@ -1,0 +1,16 @@
+    <!--Navbar-->
+     <nav>
+        <div class="logo">
+            <a href="#" class="logo"><img src="logo.jpg" alt="our logo"></a>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallary</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Feedback</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+     </nav>

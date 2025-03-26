@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+}
+
+body{
+    font-family: 'poppins', sans-serif;
+    background-color: whitesmoke;
+    margin: 0;
+}
+
+
+
+/* Animation */
+@keyframes slidto-right {
+    from{
+        color: #000000;
+        transform: translateX(-300px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+/* Main */
+
+main {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.home {
+    padding: 5% 10px 10px 5%;
+    height: auto;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+}
+
+/* For background video */
+
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media(min-aspect-ratio: 16/9){
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media(max-aspect-ratio: 16/9){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.home h1 {
+    animation-name: slidto-right;
+    animation-duration: 2s;
+    font-size: 100px;
+    margin-bottom: 0%;
+    color: rgb(198, 221, 48);
+    font-weight: 800;
+}
+
+.home h1:hover {
+    -webkit-text-stroke: 3px #000000;
+    color: white;
+}
+
+.home h3 {
+    font-size: 40px;
+    color: #1743e3;
+    margin: 0%;
+    font-weight: 500;
+}
+span:hover{
+    text-decoration: 3px underline;
+}
+
+.home p {
+    font-size: 18px;
+    margin: 25px 0 30px;
+    font-weight: 600;
+    padding-left: 20px;
+}
+
+section {
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
+    border: solid 1px #ccc;
+    margin-bottom: 2em;
+    padding: 5px 10px 10px 5%;
+    width: 100%;
+    display: inline-block;
+    flex-direction: row;
+    justify-content: space-between;
+}
+section div h1{
+    font-size: 30px;
+    text-align: center;
+}
+section div{
+    margin-top: 100px;
+}
+.section1:hover{
+    background-color: #1743e3;
+}
+
+
+
+.section1 {
+    color: #fff;
+    background-color: #3cb815;
+}
+.section1 img{
+        width: 50%;
+        float: left;
+        margin-right: 80px;
+}
+.section1:hover{
+    background-color: #1743e3;
+}
+
+
+.section2 {
+    color: #cb1753;
+    background-color:#fff ;
+}
+.section2 img{
+    float: right;
+    width: 50%;
+}
+.section2:hover{
+    background-color: #1743e3;
+    color: whitesmoke;
+}
+
+
+.section3 {
+    color: #fff;
+    background-color: #c1d114;
+}
+.section3 img{
+    float: left;
+    width: 50%;
+    margin-right: 80px;
+}
+.section3:hover{
+    background-color: #1743e3;
+}
+

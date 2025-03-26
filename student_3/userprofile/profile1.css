@@ -1,0 +1,129 @@
+#timer {
+    color: #ffffff;
+    font-family: 'Karla', sans-serif;
+    margin-bottom: 0;
+    font-size: 12.5pt;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal
+}
+body{
+    background-image: url('backgroud.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+}
+
+
+.quiz {
+    top: 350px;
+    height: 600px;
+}
+
+h1 {
+    margin: 30px auto -15px;
+    text-align: center;
+    color: #333333;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.quiz_section {
+    height: 380px;
+    width: 650px;
+    padding: 30px;
+    background-color: #010347;
+    margin: 50px auto;
+    border-radius: 18px;
+}
+
+.question {
+    padding: 15px;
+    color: #0f02c5;
+    font-size: 20px;
+    background-color: #f0d89d;
+    border-radius: 8px;
+}
+
+.options {
+    margin-top: 25px;
+}
+
+.options input[type="text"] {
+    border: 2px solid #ccc;
+    padding: 10px;
+    width: 100%;
+}
+
+.score_section {
+    padding: 25px 0;
+    text-align: center;
+}
+
+.next button {
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #f0d89d;
+    border: none;
+    padding: 15px 80px;
+    color: #0798ec;
+    border-radius: 8px;
+    box-shadow: 0 3px 0 #0171a5;
+    outline: none;
+}
+
+.next button:hover {
+    transform: scale(1.1);
+}
+
+.progress-container {
+    margin-top: 15%;
+    width: 100%;
+    height: 35px;
+    background: #949491;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #010a8b;
+    width: 0;
+    border-radius: 20px;
+    transition: width 0.5s ease-in-out;
+}
+
+
+.profile_section {
+    height: 470px;
+    width: 650px;
+    padding: 30px;
+    background-color: #010f3d;
+    margin: 50px auto;
+    border-radius: 18px;
+}
+
+.profile_section .heading {
+    text-align: center;
+    color: #295948;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#profileDetails {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0d89d;
+    border-radius: 8px;
+    overflow-y: auto;
+    max-height: 350px;
+}
+
+
+

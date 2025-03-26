@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="gallery.css">
+        <link rel="stylesheet" href="style.css">
+
+        <title>Gallery</title>
+    </head>
+
+    <body id="fontSize">
+        <!--Navbar-->
+        <nav>
+            <div class="logo">
+                <a href="../student_2/Coursework/home.html" class="logo">
+                    <img src="images/image_logo.jpg" alt="our logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <!-- Navigation links -->
+                <ul>
+                    <li><a href="../student_2/Coursework/home.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="../student_1/shop.html">Shop</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                    <li><a href="../student_2/Coursework/feedback.html">Feedback</a></li>
+                    <li><a href="../student_3/About/AB.html">About us</a></li>                
+                </ul>
+            </div>
+            <div class="user-img">
+                <a href="../student_3/userprofile/profile 1.html"><img src="images/user1.png" alt="user image"></a>
+            </div>
+        </nav>
+
+        <div class="topbar">
+            <h1 class="h1style"> Gallery </h1>
+            <div class="selectTools">
+                <form name="themes">
+                    <!-- Dropdown to select color theme -->
+                    <select name="changeTheme" id="colors" onchange="color()">
+                        <option value="#6495ED">CornflowerBlue</option>
+                        <option value="#4169E1">RoyalBlue</option>
+                        <option value="#191970">MidnightBlue</option>
+                        <option value="#55AD9B">BlueLagoon</option>
+                        <option value="#008080">CrayolaTeal</option>
+                        <option value="#597445">DarkOliveGreen</option>
+                        <option value="#000000">Black</option>
+                    </select>
+
+                    <!-- Dropdown to select font size -->
+                    <select onchange="fontFunction(this);">
+                        <option>100%</option>
+                        <option>xx-small</option>
+                        <option>x-small</option>
+                        <option>small</option>
+                        <option>medium</option>
+                        <option>large</option>
+                        <option>x-large</option>
+                        <option>xx-large</option>
+                    </select>
+
+                </form>
+            </div>
+        </div>
+        
+        <!-- Image grid section for thumbnails -->
+        <div class="imgGrid">
+            <div class="photos">
+                <img class="thumbnail cursor" src="images/coral-reefs.jpg" style="width: 245px;height:163px ;"
+                    onclick="currentSlide(1)" alt="Coral reefs">
+                <p style="margin-left: 20%;">Coral Reef Ecosystem</p>
+        </div>
+            <div class="photos">
+                <img class="thumbnail cursor" src="images/banggaiCardinalfish.jpg" style="width: 245px;height:163px ;"
+                    onclick="currentSlide(2)" alt="Bangai Cardinalfish">
+                <p style="margin-left: 20%;">Bangai Cardinalfish</p>
+            </div>
+            <div class="photos">
+                <img class="thumbnail cursor" src="images/jellyfish.jpg" style="width: 245px;height:163px ;"
+                    onclick="currentSlide(3)" alt="jellyfish">
+                <p style="margin-left: 20%;">Jellyfish</p>
+            </div>
+            <div class="photos">
+                <img class="thumbnail cursor" src="images/seaturtle.jpg" style="width: 245px;height:163px ;"
+                    onclick="currentSlide(4)" alt="Sea Turtle">
+                <p style="margin-left: 20%;">Green Sea turtle</p>
+            </div>
+            <div class="photos">
+                <img class="thumbnail cursor" src="images/seagrass.jpg" style="width: 245px;height:163px ;"
+                    onclick="currentSlide(5)" alt="Sea grass">
+                <p style="margin-left: 20%;">Cymodocea</p>
+            </div>
+            <div class="photos">
+                <img class="thumbnail cursor" src="images/sharks.jpg" style="width: 245px;height:163px ;"
+                    onclick="currentSlide(6)" alt="Silky sharks">
+                <p style="margin-left: 20%;">Sharks</p>
+            </div>
+            <div class="photos">
+                <img class="thumbnail cursor" src="images/anemone.jpg" style="width: 245px;height:163px ;"
+                    onclick="currentSlide(7)" alt="Sea anemone">
+                <p style="margin-left: 20%;">Sea anemone</p>
+            </div>   
+            <div class="photos">
+                <img class="thumbnail cursor" src="images/turtlegrass.jpg" style="width: 245px;height:163px ;"
+                    onclick="currentSlide(8)" alt="Turtle grass">
+                <p style="margin-left: 20%;">Turtle grass</p>
+            </div>
+            <div class="photos">
+                <img class="thumbnail cursor" src="images/Harlequin_tuskfish.jpg" style="width: 245px;height:163px ;"
+                    onclick="currentSlide(9)" alt="Harlequin tuskfish">
+                <p style="margin-left: 20%;">Harlequin tuskfish</p>
+            </div>
+            <div class="photos">
+                <img class="thumbnail cursor" src="images/Ocellaris_clownfish.jpg" style="width: 245px;height:163px ;"
+                    onclick="currentSlide(10)" alt="Ocellaris clownfish">
+                <p style="margin-left: 20%;">Ocellaris clownfish</p>
+            </div>
+    </div>
+
+    <!-- Image slider section with detailed descriptions -->
+    <div class="descriptions">
+        <div class="myslides">
+            <div class="number">1/10</div>
+            <img src="images/coral-reefs.jpg" style="width:100%;height: 450px;" alt="Coral reefs">
+            <div class="information">
+                <h2><u> Coral Reef Ecosystem </u></h2>
+                <p>This image depicts a vibrant underwater scene featuring a coral reef. 
+                    The reef is adorned with various types of corals, some resembling brain corals and branching corals. 
+                    Numerous small, brightly colored fish, predominantly orange, are swimming around the coral structures. 
+                    The clear blue water enhances the visibility of the reef and the marine life, showcasing the beauty and diversity of this underwater ecosystem.</p>
+            </div>
+        </div>
+
+        <div class="myslides">
+            <div class="number">2/10</div>
+            <img src="images/banggaiCardinalfish.jpg" style="width:100%;height: 450px;" alt="Bangai Cardinalfish">
+            <div class="information">
+                <h2><u> Banggai Cardinalfish </u></h2>
+                <p>A school of striking Banggai Cardinalfish swim gracefully among coral formations, 
+                    showcasing their black and white stripes and elongated fins against a serene, purple-hued background.</p>
+            </div>
+        </div>
+
+        <div class="myslides">
+            <div class="number">3/10</div>
+            <img src="images/jellyfish.jpg" style="width:100%;height: 450px;" alt="jellyfish">
+            <div class="information">
+                <h2><u> Jellyfish </u></h2>
+                <p>A mesmerizing jellyfish gracefully drifts through the deep blue water, 
+                    its translucent body and long, delicate tentacles highlighted against the vibrant backdrop. 
+                    The intricate patterns and soft hues of the jellyfish create a captivating underwater scene.</p>
+            </div>
+        </div>
+
+        <div class="myslides">
+            <div class="number">4/10</div>
+            <img src="images/seaturtle.jpg" style="width:100%;height: 450px;" alt="Sea Turtle">
+            <div class="information">
+                <h2><u> Green Sea Turtle </u></h2>
+                <p>The green sea turtle is a large, herbivorous marine reptile found in tropical and subtropical seas. 
+                    Recognizable by its smooth, greenish-colored shell, it primarily feeds on seagrasses and algae. 
+                    These turtles are crucial for marine ecosystems but are threatened by habitat loss, climate change, and poaching.</p>
+            </div>
+        </div>
+
+        <div class="myslides">
+            <div class="number">5/10</div>
+            <img src="images/seagrass.jpg" style="width:100%;height: 450px;" alt="Sea grass">
+            <div class="information">
+                <h2><u> Cymodocea </u></h2>
+                <p>Cymodocea is a genus of seagrasses found in shallow coastal waters. 
+                    These marine plants form underwater meadows that provide essential habitats for marine life, including fish and invertebrates. 
+                    Cymodocea species play a critical role in maintaining healthy coastal ecosystems by stabilizing sediments and contributing to carbon sequestration.</p>
+            </div>
+        </div>
+
+        <div class="myslides">
+            <div class="number">6/10</div>
+            <img src="images/sharks.jpg"  style="width:100%;height: 450px;" alt="Silky sharks">
+            <div class="information">
+                <h2><u> Sharks </u></h2>
+                <p>Sharks are powerful, streamlined predators found in diverse marine environments. Known for their sharp teeth and keen senses, 
+                    they play a vital role in maintaining oceanic balance by controlling prey populations. 
+                    Sharks exhibit a wide range of sizes and behaviors, making them crucial to the health of marine ecosystems.</p>
+            </div>
+        </div>
+
+        <div class="myslides">
+            <div class="number">7/10</div>
+            <img src="images/anemone.jpg" style="width:100%;height: 450px;" alt="Sea anemone">
+            <div class="information">
+                <h2><u> Sea Anemones </u></h2>
+                <p>Sea anemones are colorful, soft-bodied marine invertebrates with tentacles that capture prey and defend against predators. 
+                    They attach to surfaces like rocks or coral reefs and use their stinging cells to immobilize fish and small invertebrates. 
+                    These creatures form symbiotic relationships with clownfish and contribute to the health of coral reef ecosystems.</p>
+            </div>
+        </div>
+
+        <div class="myslides">
+            <div class="number">8/10</div>
+            <img src="images/turtlegrass.jpg" style="width:100%;height: 450px;" alt="Turtle grass">
+            <div class="information">
+                <h2><u> Turtle grass </u></h2>
+                <p>Turtle grass is a type of seagrass found in shallow, coastal waters of the Caribbean and Gulf of Mexico. 
+                    It forms dense underwater meadows that provide essential habitats for marine life, including fish, crustaceans, and sea turtles. 
+                    Turtle grass plays a crucial role in stabilizing the seabed and maintaining healthy marine ecosystems.</p>
+            </div>
+        </div>
+
+        <div class="myslides">
+            <div class="number">9/10</div>
+            <img src="images/Harlequin_tuskfish.jpg" style="width:100%;height: 450px;" alt="Harlequin tuskfish">
+            <div class="information">
+                <h2><u> Harlequin Tuskfish </u></h2>
+                <p>The Harlequin Tuskfish is a vibrant, medium-sized marine fish known for its striking blue teeth and vivid orange, blue, and white stripes. 
+                    Found primarily in the coral reefs of the Indo-Pacific region, this carnivorous fish preys on invertebrates and small fish, 
+                    playing an important role in maintaining reef health and biodiversity.</p>
+            </div>
+        </div>
+
+        <div class="myslides">
+            <div class="number">10/10</div>
+            <img src="images/Ocellaris_clownfish.jpg" style="width:100%;height: 450px;" alt="Ocellaris clownfish">
+            <div class="information">
+                <h2><u> Ocellaris clownfish </u></h2>
+                <p>The Ocellaris Clownfish, known for its striking orange body with white bands, is a small marine fish found in the warm waters of the Indo-Pacific. 
+                    Famous for its symbiotic relationship with sea anemones, this clownfish gains protection from predators while providing its host with food and cleaning services, 
+                    contributing to a balanced reef ecosystem.</p>
+            </div>
+        
+        </div>
+
+        <!-- Navigation Arrows for Slideshow -->
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+    </div>
+
+    <!-- Gap between content and footer -->
+    <div class="gap"></div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+         <p>Copyright &copy; 2024 <br>
+         All rights reserved</p>
+         <p>Developed by <a href="page_editor4.html">Dinuka Viraji</a></p>
+        </div>
+
+        <!-- Additional Content Links -->
+        <div class="contentpage">
+        <h4>More content</h4>
+          <a href="../student_4/content_page_student4.html">Economic values of oceans</a>
+          <a href="content_page_student4.html">Marine biodiversity conservation</a>
+          <a href="../student_2/Coursework/article03.html">The Impact of Plastics on Marine Life</a>
+          <a href="../student_1/coralConservation.html">Coral reef conservation</a>  
+     </div>
+     <!-- Team Members Section -->
+     <div class="student">
+         <h4>Our Team</h4>
+         <ol>
+             <li>Student 1 - Isuru Karunaratna</li>
+             <li>Student 2 - Lalindu S jayasinghe</li>
+             <li>Student 3 - Mewanya Lokuge</li>
+             <li>Student 4 - Dinuka Viraji</li>
+         </ol>
+     </div>
+     </footer>
+
+    <!-- JavaScript for Gallery Page -->
+    <script src="gallery.js"></script>
+    </body>
+</html>

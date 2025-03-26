@@ -1,0 +1,23 @@
+.svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-image: url(images/backgroundimage.jpg);
+    background-size: cover;
+    margin: 0;
+}
+
+.node {
+    fill: lightblue;
+    stroke: black;
+    stroke-width: 2px;
+    text-anchor: middle;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.link {
+    stroke: black;
+    stroke-width: 2px;
+}
