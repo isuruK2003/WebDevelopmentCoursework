@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +9,22 @@
     <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <!--Navbar-->
     <nav>
         <div class="logo">
-            <a href="../student_2/Coursework/home.html" class="logo">
+            <a href="../student_2/home.html" class="logo">
                 <img src="Icons/logo.jpg" alt="our logo">
             </a>
         </div>
         <div class="nav-links">
             <ul>
-                <li><a href="../student_2/Coursework/home.html">Home</a></li>
+                <li><a href="../student_2/home.html">Home</a></li>
                 <li><a href="../student_4/gallery.html">Galary</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="../student_4/sitemap.html">Sitemap</a></li>
-                <li><a href="../student_2/Coursework/feedback.html">Feedback</a></li>
+                <li><a href="../student_2/feedback.html">Feedback</a></li>
             </ul>
         </div>
         <div class="user-img">
@@ -52,7 +54,7 @@
                 <select name="sort-by" id="sort-by" onchange="sortProducts()">
                     <option value="unitPrice">Price</option>
                     <option value="title">Name</option>
-                </select>                
+                </select>
             </div>
             <button id="cart-open" onclick="openCart()">
                 <img src="Icons/cart.svg" alt="Cart">
@@ -85,20 +87,20 @@
                     <button onclick="closeCart()">&#10005;</button>
                 </div>
                 <h2>Your order</h2>
-            
+
                 <div id="cart-empty">
                     <img src="Icons/empty_cart.svg" alt="Empty cart image">
                     <p>EMPTY CART</p>
                 </div>
-    
+
                 <form action="checkout.html" method="get" onsubmit="submitCheck()">
                     <div class="cart-content">
-                    <table id="cart-content">
-                    <!-- Cart item HTML will be added by javascript -->
-                    
-                    <!-- Example -->
+                        <table id="cart-content">
+                            <!-- Cart item HTML will be added by javascript -->
 
-                    <!-- <tr id="product-1" class="cart-item">
+                            <!-- Example -->
+
+                            <!-- <tr id="product-1" class="cart-item">
                     <td>
                         <button class="cart-remove-btn" onclick="removeFromCart('product-1')">
                             &#10005;
@@ -125,7 +127,7 @@
                         <div class="cart-item-total">&#163;10</div>
                     </td>
                     </tr> -->
-                    </table>
+                        </table>
                     </div>
 
                     <div class="cart-controls">
@@ -140,20 +142,20 @@
             </div>
         </div>
     </main>
-    
+
     <!-- Footer -->
     <footer>
         <div class="footer-content">
             <p>Copyright &copy; 2020 <br>
-            All rights reserved</p>
+                All rights reserved</p>
             <p>Developed By: <a href="isuru.html">Isuru Karunaratna</a></p>
         </div>
         <div class="contentpage">
-        <h4>More content</h4>
+            <h4>More content</h4>
             <a href="../student_3/Content Page/content.html">Economic values of oceans</a>
             <a href="../student_4/content_page_student4.html">Marine biodiversity conservation</a>
-            <a href="../student_2/Coursework/article03.html">The Impact of Plastics on Marine Life</a>
-            <a href="coralConservation.html">Coral reef conservation</a>  
+            <a href="../student_2/article03.html">The Impact of Plastics on Marine Life</a>
+            <a href="coralConservation.html">Coral reef conservation</a>
         </div>
         <div class="student">
             <h4>Our Team</h4>
@@ -167,4 +169,5 @@
     </footer>
     <script src="javascripts/shop.js"></script>
 </body>
+
 </html>
